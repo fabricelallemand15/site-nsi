@@ -1,0 +1,38 @@
+html {
+    background-color: dimgrey;
+}
+
+body {
+    background-color: antiquewhite;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+p.centrer {
+    text-align: center;
+}
+
+#nb_clics {
+    font-size: 5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#reinit {
+    background-color: seagreen;
+    font-size: xx-large;
+}
+
+#lion {
+    display: block;
+    margin: 0 auto;
+}
+
+#couleurBG, #couleurFG {
+    font-size: xx-large;
+}

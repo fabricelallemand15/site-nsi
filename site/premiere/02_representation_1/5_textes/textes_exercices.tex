@@ -1,0 +1,446 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{etex} %évite les erreurs no room for ....
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb} %gestion des symboles mathmatiques
+\usepackage{amsfonts} %gestion des polices mathmatiques
+\usepackage{fancybox} %gestion des encadrements
+\usepackage{lastpage} %gestion du nombre total de pages du document
+\usepackage{geometry} %gestion des marges du document
+\usepackage{fancyhdr} %gestion des entetes et des pieds de page
+\usepackage{epsfig}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pdftricks}
+\usepackage{eurosym}
+\usepackage{pifont}
+\usepackage{eucal}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\usepackage{diagbox}
+\usepackage{lscape}
+\usepackage{ifpdf}
+\usepackage[tikz]{bclogo}
+\usepackage{amsthm}
+\usepackage{tabvar}
+\usepackage{multicol}
+\usepackage{frcursive}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{eurosym}
+\usepackage{cancel}
+\usepackage{longtable,booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\usepackage{varwidth}
+\usepackage{MnSymbol} % contient le caractère \nsubset
+\usepackage{wrapfig}
+\usepackage{wasysym} % pour certains symboles
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage[np]{numprint}
+\usepackage{fontawesome5}
+\usepackage{xspace}
+\usepackage{listingsutf8}
+
+\titleformat{\section}
+{\Large\bfseries}{\thesection}{1em}{}[\titlerule]
+% {\Large\bfseries}{\thesection}{1em}{\MakeUppercase}[\titlerule]
+
+\titleformat{\subsection}
+{\large\bfseries}{\thesubsection}{1em}{}[\titlerule]
+% {\large\bfseries}{\thesubsection}{1em}{\MakeUppercase}[\titlerule]
+
+%% Macro pour limite  gauche%%
+\newcommand{\limgauche}[2]{\lim_{#1\rightarrow #2\hspace{-1.5em}\raisebox{-1.2ex}{\scriptsize $#1<#2$}}}
+
+%% Macro pour limite  droite%%
+\newcommand{\limdroite}[2]{\lim_{#1\rightarrow #2\hspace{-1.5em}\raisebox{-1.2ex}{\scriptsize $#1>#2$}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lm}[2]{\displaystyle{\lim_{#1 \rightarrow #2}}}
+\newcommand{\e}[1]{\text{e}^{#1}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\newcommand{\vect}[1]{\mathchoice%
+{\overrightarrow{\displaystyle\mathstrut#1\,\,}}%
+{\overrightarrow{\textstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptscriptstyle\mathstrut#1\,\,}}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~ \vect{\jmath},~ \vect{k}\right)$}
+\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
+\newcommand{\V}{\overrightarrow}
+\newcommand{\Coor}{\binom}
+\newcommand{\Rep}{\left(O;\V{i},\V{j}\right)}
+\renewcommand{\emph}{\textit}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Syst}[2]{\left\{
+  \begin{array}{ccccc}
+    #1   
+    #2
+  \end{array}\right.
+}
+
+%configuration de listings
+\definecolor{couleuroperations}{rgb}{0.6,0.2,1}
+\lstset{
+backgroundcolor=\color{lightgray!15},
+frame=leftline,
+%   framexleftmargin=5mm,
+rulesepcolor=\color{lightgray},
+inputencoding=utf8,
+language=python,
+basicstyle=\ttfamily\small, %
+identifierstyle=\color{black}, %
+keywordstyle=\color{MidnightBlue}, %
+stringstyle=\color{purple}, %
+commentstyle=\it\color{olive}, %
+columns=flexible, %
+tabsize=2, %
+extendedchars=true, %
+showspaces=false, %
+showstringspaces=false, %
+numbers=none, %
+numberstyle=\tiny, %
+breaklines=true, %
+breakautoindent=true, %
+captionpos=b,
+literate=%
+  *{+}{{{\color{couleuroperations}+}}}1
+  {-}{{{\color{couleuroperations}-}}}1
+  {/}{{{\color{couleuroperations}/}}}1
+  {*}{{{\color{couleuroperations}*}}}1
+  {=}{{{\color{couleuroperations}=}}}1
+  {<}{{{\color{couleuroperations}<}}}1
+  {>}{{{\color{couleuroperations}>}}}1
+  {\%}{{{\color{couleuroperations}\%}}}1
+  {(}{{{\color{couleuroperations}(}}}1
+  {)}{{{\color{couleuroperations})}}}1
+  {[}{{{\color{couleuroperations}[}}}1
+  {]}{{{\color{couleuroperations}]}}}1
+  {.}{{{\color{couleuroperations}.}}}1
+  {,}{{{\color{couleuroperations},}}}1
+  {1}{{{\color{Cyan}1}}}1
+  {2}{{{\color{Cyan}2}}}1
+  {3}{{{\color{Cyan}3}}}1
+  {4}{{{\color{Cyan}4}}}1
+  {5}{{{\color{Cyan}5}}}1
+  {6}{{{\color{Cyan}6}}}1
+  {7}{{{\color{Cyan}7}}}1
+  {8}{{{\color{Cyan}8}}}1
+  {9}{{{\color{Cyan}9}}}1
+  {0}{{{\color{Cyan}0}}}1,
+}
+
+%%%%%%%%%%%%%%%%%% MES ENVIRONNEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{definition}[1]{\begin{tcolorbox}[title= {\color{NavyBlue} \faPencil*}~~\textbf{Définition #1}, colframe=NavyBlue, colback=white, colbacktitle=NavyBlue!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{info}[1]{\begin{tcolorbox}[title= {\color{ProcessBlue} \faBook}~~\textbf{#1}, colframe=ProcessBlue, colback=white, colbacktitle=ProcessBlue!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{remarque}[1]{\begin{tcolorbox}[title= {\color{SkyBlue} \faInfo}~~\textbf{Remarque #1}, colframe=SkyBlue, colback=white, colbacktitle=SkyBlue!20!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{indication}[1]{\begin{tcolorbox}[title= {\color{Turquoise} \faHotjar}~~\textbf{Indication #1}, colframe=Turquoise, colback=white, colbacktitle=Turquoise!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{solution}[1]{\begin{tcolorbox}[title= {\color{ForestGreen} \faCheck}~~\textbf{Solution #1}, colframe=ForestGreen, colback=white, colbacktitle=ForestGreen!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{exercice}[1]{\begin{tcolorbox}[title= {\color{YellowGreen} \faQuestion}~~\textbf{Exercice #1}, colframe=YellowGreen, colback=white, colbacktitle=YellowGreen!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{attention}[1]{\begin{tcolorbox}[title= {\color{Dandelion} \faExclamationTriangle}~~\textbf{Attention #1}, colframe=Dandelion, colback=white, colbacktitle=Dandelion!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{avertissement}[1]{\begin{tcolorbox}[title= {\color{RedOrange} \faSkullCrossbones}~~\textbf{#1}, colframe=RedOrange, colback=white, colbacktitle=RedOrange!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{theoreme}[1]{\begin{tcolorbox}[title= {\color{red} \faBolt}~~\textbf{Thèorème #1}, colframe=red, colback=white, colbacktitle=red!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{exemple}[1]{\begin{tcolorbox}[title= {\color{Periwinkle} \faFlask}~~\textbf{Exemple #1}, colframe=Periwinkle, colback=white, colbacktitle=Periwinkle!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{citations}[1]{\begin{tcolorbox}[title= {\color{Gray} \faQuoteRight}~~\textbf{Citation #1}, colframe=Gray, colback=white, colbacktitle=Gray!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\geometry{ tmargin=2cm,bmargin=2cm, hmargin=1.5cm }
+
+\everymath{\displaystyle}
+
+\setlength{\parindent}{0cm}
+
+\pagestyle{fancy}
+
+\begin{document}
+    
+    
+    \lhead{Première NSI} \rhead{2022/2023}
+    \chead{} 
+    \cfoot{}
+    \lfoot{Lycée \'Emile Duclaux}
+    \rfoot{Page \thepage/\pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    
+    \Huge S2 - Ch. 5 : Représentation d'un texte en machine  
+
+    \vspace{.25cm}
+    \normalsize Exercices  
+    
+    \vspace{.25cm}
+    \hrule
+    
+    \vspace{.5cm}
+
+  
+
+
+\emph{Les exercices précédés du symbole \faDesktop{}
+sont à faire sur machine, en sauvegardant le fichier si nécessaire.}
+
+\emph{Les exercices précédés du symbole \faPencil* doivent
+être résolus par écrit.}
+
+\hypertarget{fontawesome-solid-computer-exercice-1}{%
+\subsection*{\faDesktop{} Exercice
+1}\label{fontawesome-solid-computer-exercice-1}}
+
+Écrire une procédure qui affiche à l'écran la table des 128 caractères
+ASCII sur 8 lignes de 16 colonnes, avec deux boucles \texttt{for}
+imbriquées et la fonction \texttt{chr()}.
+
+ 
+
+\hypertarget{fontawesome-solid-computer-exercice-2}{%
+\subsection*{\faDesktop{} Exercice
+2}\label{fontawesome-solid-computer-exercice-2}}
+
+L'encodage consiste à coder un caractère par un nombre. Il ne faut pas
+confondre cette opération de \textbf{numérisation} avec le
+\textbf{chiffrement}, ou \textbf{cryptage}, qui consiste aussi à
+remplacer des caractères par des nombres, mais de telle façon que le
+décodage ne puisse se faire que par le destinataire du message. La
+numérisation est cependant le plus souvent la première étape du
+chiffrement.
+
+Considérons le procédé \textbf{rot-13} qui consiste à remplacer une
+lettre codée par l'entier \(n\) par la lettre codée par l'entier
+\(n+13\) (on se limite aux caractères de la table ASCII).
+
+Comme l'alphabet latin compte 26 lettres, le déchiffrement se fait
+exactement par la même opération.
+
+Pour trouver que l'image par rot-13 du caractère `R' est `E' :
+
+\begin{itemize}
+\tightlist
+\item
+  on calcule d'abord le rang alphabétique du caractère :
+
+\begin{center}
+\begin{minipage}{5cm}
+\begin{minted}[frame=lines,framesep=2mm, framerule=2pt,rulecolor=Gray!90,bgcolor=Gray!15,label=\faPython{} Console Python]{pycon}
+>>> ord('R') - ord('A')
+17    
+\end{minted}
+\end{minipage}
+\end{center}
+ 
+\item
+  puis on ajoute 13 à ce rang et on prend le reste dans la division
+  euclidienne par 26 :
+
+\begin{center}
+\begin{minipage}{8cm}
+\begin{minted}[mathescape,frame=lines,framesep=2mm, framerule=2pt,rulecolor=Gray!90,bgcolor=Gray!15,label=\faPython{} Console Python]{pycon}
+>>> (ord('R') - ord('A') + 13) % 26
+4
+\end{minted}
+\end{minipage}
+\end{center}
+
+\item
+  enfin on retrouve le rang du caractère associé au rang alphabétique
+  calculé :
+
+\begin{center}
+\begin{minipage}{5cm}
+\begin{minted}[frame=lines,framesep=2mm, framerule=2pt,rulecolor=Gray!90,bgcolor=Gray!15,label=\faPython{} Console Python]{pycon}
+>>> chr(ord('A') + 4)
+'E'
+\end{minted}
+\end{minipage}
+\end{center}
+  \
+\end{itemize}
+
+Écrire une fonction \texttt{rot13(chaine)} qui chiffre ou déchiffre la
+chaîne (en majuscules ou convertie en majuscules avec
+\texttt{chaine.upper())} passée en paramètre, avec l'algorithme rot13.
+
+ 
+
+\hypertarget{octicons-pencil-16-exercice-3}{%
+\subsection*{\faPencil* Exercice
+3}\label{octicons-pencil-16-exercice-3}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Sur une page web qui s'affiche sur notre navigateur on peut lire :
+
+\begin{center}
+\begin{minipage}{10cm}
+En consÃ\copyright quence, l'AssemblÃ\copyright e Nationale reconnaÃ\copyright t et dÃ\copyright clare, en
+prÃ\copyright sence ...
+\end{minipage}
+\end{center}
+ 
+
+Quelle peut être la cause des affichages étranges de cette page ?
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  l'encodage des caractères n'est pas celui attendu par le navigateur
+\item[$\square$]
+  le texte original est en japonais
+\item[$\square$]
+  la taille des caractères n'est pas celle attendue par le navigateur
+\item[$\square$]
+  la connexion à Internet présente des coupures
+\end{itemize}
+
+\newpage
+
+\item
+  Le code ASCII permet de représenter en binaire les caractères
+  alphanumériques. Quel est son principal inconvénient ?
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Il utilise beaucoup de bits.
+\item[$\square$]
+  Il ne différencie pas les majuscules des minuscules.
+\item[$\square$]
+  Il ne représente pas les caractères accentués.
+\item[$\square$]
+  Il n'est passer compatible avec la plupart des systèmes informatiques
+\end{itemize}
+
+\end{enumerate}
+
+\hypertarget{octicons-pencil-16-exercice-4}{%
+\subsection*{\faPencil* Exercice
+4}\label{octicons-pencil-16-exercice-4}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Parmi les caractères ci-dessous, lequel ne fait pas partie du code
+  ASCII ?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  a
+\item[$\square$]
+  B
+\item[$\square$]
+  @
+\item[$\square$]
+  é
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Laquelle de ces affirmations concernant le codage UTF-8 des caractères
+  est vraie ?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  le codage UTF-8 est sur 7 bits
+\item[$\square$]
+  le codage UTF-8 est sur 8 bits
+\item[$\square$]
+  le codage UTF-8 est sur 1 à 4 octets
+\item[$\square$]
+  le codage UTF-8 est sur 8 octets
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Quel est un avantage du codage UTF-8 par rapport au codage ASCII ?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  il permet de coder un caractère sur un octet au lieu de deux
+\item[$\square$]
+  il permet de coder les majuscules
+\item[$\square$]
+  il permet de coder tous les caractères
+\item[$\square$]
+  il permet de coder différentes polices de caractères
+\end{itemize}
+
+ 
+
+\hypertarget{fontawesome-solid-computer-exercice-5}{%
+\subsection*{\faDesktop{} Exercice
+5}\label{fontawesome-solid-computer-exercice-5}}
+
+En Python, pour saisir directement un caractère à partir de son point de
+code Unicode, on peut utiliser des séquences d'échappement spéciales :
+\lstinline!\uxxxx! si le point de code peut s'écrire avec 4 chiffres hexadécimaux,
+ou \lstinline!\Uxxxxxxxx! s'il faut plus de quatre chiffres, en remplissant par
+des 0 à gauche les positions vides sur les huit possibles.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Tester l'instruction ci-dessous dans une console Python :
+
+\begin{center}
+\begin{minipage}{5cm}
+\begin{minted}[frame=lines,framesep=2mm, framerule=2pt,rulecolor=Gray!90,bgcolor=Gray!15,label=\faPython{} Console Python]{pycon}
+>>> print("\U0001f600")
+\end{minted}
+\end{minipage}
+\end{center}
+  
+\item
+  Écrire un code Python qui affiche tous les caractères dont le point de
+  code est compris entre \texttt{U+1F600} et \texttt{U+1F64F} sur des
+  lignes de 16 caractères par colonne.
+\end{enumerate}
+
+
+\end{document}

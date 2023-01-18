@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Une page web interactive</title>
+    <link rel="stylesheet" href="acti3.css">
+    <script src="acti3.js"></script>
+
+</head>
+
+<body onclick="compte()">
+    <h1>
+        Cette page contient quelques exemples d'interactivités pilotées par des événements.
+    </h1>
+    <section>
+        <h2>Nombre de clics</h2>
+        <p>À chaque fois que vous cliquez dans cette page, vous déclenchez un événement qu'une fonction écrite en Javascript peut intercepter.<br>Voici le nombre total de clics (gauches) depuis que cette fenêtre est ouverte :</p>
+        <p class="centrer" id="nb_clics">0</p>
+        <p>Cliquer sur le bouton ci-dessous pour réinitialiser le compteur.</p>
+        <p class="centrer"><button id="reinit" onclick="reinitialiser()">Remettre à zéro</button></p>
+    </section>
+    <hr>
+    <section>
+        <h2>Déplacement de la souris</h2>
+        <p>Que se passe-t-il quand vous caressez ce beau lion avec la souris ?</p>
+        <img id="lion" src="lion1.jpg" alt="un joli lion" onmouseover="change_img()" onmouseleave="restaure_img()">
+    </section>
+    <hr>
+    <section>
+        <h2>Modification des propriétés de la page</h2>
+        <p>Voici deux boutons. Cliquer sur ces boutons et observer leur effet !</p>
+        <p class="centrer"><button id="couleurBG" onclick="changeBG()">Arrière plan</button> <button id="couleurFG" onclick="changeFG()">Premier plan</button></p>
+    </section>
+</body>
+
+</html>
