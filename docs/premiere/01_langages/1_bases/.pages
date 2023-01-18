@@ -1,0 +1,10 @@
+title: 1. Python, les bases
+
+nav :
+    - Les bases de Python (cours): python_bases.md
+    - Exercices (1): python_bases_exos_1.md
+    - Exercices (2): python_bases_exos_2.md
+    - Exercices (3): python_bases_exos_3.md
+    - Exercices (4): python_bases_exos_4.md
+    - Quiz sur les bases de Python: python_bases_quiz.md
+    - L'essentiel: essentiel.md

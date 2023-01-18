@@ -1,0 +1,14 @@
+nav:
+    - Accueil: 
+        - index.md
+        - tags-index.md
+        - Mentions légales: mentions.md
+        - Politique de confidentialité: politique_conf.md
+    #- seconde
+    - premiere
+    - terminale
+    - histoire
+    - ressources
+    - Console Python: https://python.flallemand.fr
+    - Jupyter Notebook: https://notebook.flallemand.fr
+    - Blog: https://flallemand.fr/wp

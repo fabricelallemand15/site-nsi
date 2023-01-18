@@ -1,0 +1,142 @@
+site_name: Bloc-notes NSI
+site_author: Fabrice Lallemand
+site_description: Site personnel de Fabrice Lallemand, professeur agrégé de mathématiques
+site_url: https://nsi.flallemand.fr
+repo_url: https://gitlab.com/sites32/site_nsi
+repo_name: sources sur GitLab
+edit_uri: ""
+
+
+theme:
+    name:  'material'
+    custom_dir: my_theme_customizations/
+    font: false
+    language: 'fr'
+    favicon: assets/images/favicon.ico
+    logo: assets/images/favicon.ico
+    icon:
+      repo: fontawesome/brands/gitlab
+    palette:                        # Palettes de couleurs jour/nuit
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: deep orange
+        accent: green
+        toggle:
+            icon: material/lightbulb
+            name: Passer au mode jour
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: deep orange
+        accent: green
+        toggle:
+            icon: material/lightbulb-outline
+            name: Passer au mode nuit
+    features:
+        - navigation.tabs
+        - navigation.top
+        - navigation.indexes
+        - navigation.instant
+        - toc.integrate
+copyright: '<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">© Licence CC-BY-NC-SA 4.0 International</a> - <a href="https://flallemand.fr/nsi/mentions/">Mentions légales</a>'
+markdown_extensions:
+    - toc:
+        permalink: ⚓︎
+        toc_depth: 3
+    - meta
+    - abbr
+    - footnotes
+    - admonition
+    - codehilite:
+        linenums: true
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.highlight:           # Coloration syntaxique du code
+        auto_title: true
+        auto_title_map:
+            "Python": "🐍 Script Python"
+            "Python Console Session": "🐍 Console Python"
+            "Text Only": "📋 Texte"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
+    - pymdownx.tabbed:
+        alternate_style: true 
+    - pymdownx.tilde
+    - attr_list
+    - md_in_html
+    - tables
+    - def_list
+    - pymdownx.keys:
+        separator: "\uff0b"
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+    social:
+        - icon: fontawesome/brands/gitlab
+          link: https://gitlab.com/sites32/site_nsi
+          name: Dépôt GitLab
+
+        - icon: fontawesome/brands/discourse
+          link: https://mooc-forums.inria.fr/moocnsi/
+          name: Le forum des enseignants de NSI
+
+    site_url: https://nsi.flallemand.fr
+
+extra_javascript:
+    - assets/javascript/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    #- xtra/interpreter.js
+extra_css:
+    - assets/css/style.css
+    #- xtra/pyoditeur.css
+    #- xtra/ajustements.css 
+
+dev_addr: '127.0.0.1:5000'
+plugins:
+    - search
+    #- mkdocs-jupyter
+    - awesome-pages:
+        strict: false
+        collapse_single_pages: true
+    - tags:
+        tags_file: tags-index.md
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: date
+    - encryptcontent:
+        hljs: true
+        mermaid2: true
+        title_prefix: '[PROTEGÉ]'
+        summary: 'Le contenu de cette page est crypté.'
+        placeholder: 'Entrer le mot de passe et taper ENTRÉE'
+        decryption_failure_message: 'Mot de passe invalide !'
+        encryption_info_message: "Contacter l'administrateur pour accéder à cette page !"
+        password_button: True
+        password_button_text: 'OK'
+    - page-to-pdf:
+        disable: false
+        displayHeaderFooter: true
+        headerTemplate: '<header style="width:100%;font-size:10px;margin:10px 20 px;-webkit-print-color-adjust: exact"><span style="display:inline-block;margin-left:10px;">NSI - Lycée Emile DUCLAUX - </span><span class="title"></span></header>'
+        footerTemplate: '<footer style="position:relative;width:100%;font-size:10px;margin:10px 20px;-webkit-print-color-adjust: exact"><span class="page" style="position:absolute;bottom:0;right:0;"><span>nsi.flallemand.fr - </span><span class="pageNumber"></span>/<span class="totalPages"></span></span></footer>'
+    #- macros

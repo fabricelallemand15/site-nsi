@@ -1,0 +1,11 @@
+title: S4-Représentation de données - types construits
+nav:
+    - index.md
+    - 1. p-uplets: p_uplets.md
+    - 2. Tableaux: tableaux.md
+    - 3. Dictionnaires: dicos.md
+    - Quiz: quiz.md
+    - Exercices sur les p_uplets: exos_tuples.md
+    - Exercices sur les tableaux: exos_tabs.md
+    - Exercices sur les dictionnaires : exos_dicos.md
+    - L'essentiel: essentiel.md

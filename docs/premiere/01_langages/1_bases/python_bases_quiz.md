@@ -1,0 +1,13 @@
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=4" width="828" height="269" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (01)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=5" width="828" height="269" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (02)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=6" width="828" height="269" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (03)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=7" width="828" height="269" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (04)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=8" width="828" height="269" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (05)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=9" width="828" height="312" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (06)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=10" width="828" height="465" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (07)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=11" width="828" height="495" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (08)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=2" width="828" height="426" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (2)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="828" height="510" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (3)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=12" width="828" height="313" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (11)"></iframe>
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=13" width="828" height="270" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz sur les bases de Python (12)"></iframe>
+<script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>

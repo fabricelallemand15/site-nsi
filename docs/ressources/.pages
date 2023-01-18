@@ -1,0 +1,8 @@
+title: Ressources
+
+nav:
+    - Ressources: index.md
+    - Éditeurs de code pour Python: python_IDE.md
+    - Prise en main de Spyder: spyder.md
+    - Exercices en ligne: exos.md
+    - Sources utilisées : Sources.md

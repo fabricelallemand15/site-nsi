@@ -1,0 +1,9 @@
+title: S2-Représentation de données - types et valeurs de base
+nav:
+    - index.md
+    - 1_naturels
+    - 2_relatifs
+    - 3_reels
+    - mini_tp_nombres.md
+    - 4_booleens
+    - 5_textes

@@ -1,0 +1,7 @@
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=14" width="828" height="273" frameborder="0" allowfullscreen="allowfullscreen" title="spécification 1"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=15" width="828" height="267" frameborder="0" allowfullscreen="allowfullscreen" title="Spécification 2"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=16" width="828" height="318" frameborder="0" allowfullscreen="allowfullscreen" title="Spécification 3"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=17" width="828" height="504" frameborder="0" allowfullscreen="allowfullscreen" title="Spécification 4"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>

@@ -1,0 +1,1 @@
+Les sujets possible de l'épreuve pratique sont publics et disponibles sur [cette page EDUSCOL](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi){ target=_blank }.

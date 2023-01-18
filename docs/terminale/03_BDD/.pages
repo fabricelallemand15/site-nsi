@@ -1,0 +1,9 @@
+title: S3-Bases de données
+nav:
+    - index.md
+    - 1. Modèle relationnel, BDD: modele_relationnel
+    - 2. Langage SQL: SQL
+    - Exercices: exos.md
+    - T.P.1 - Créer une base de données: TP1.md
+    - T.P.2 - Le supermarché: TP2.md
+    - T.P.3 - BDD et Python: TP3.md

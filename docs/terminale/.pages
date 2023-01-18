@@ -1,0 +1,13 @@
+title: Terminale (NSI)
+nav:
+    - index.md
+    - 01_langages
+    - 02_structures
+    - 03_BDD
+    - 04_arbres
+    - 05_archi_SE
+    - 06_algo_1
+    - 07_reseaux
+    - 08_complements
+    - Sujets épreuve écrite: annales.md
+    - Sujets épreuve pratique: epreuve_pratique.md

@@ -1,0 +1,65 @@
+img {display: block; margin: auto auto;}
+img[alt=imagetab]{height: 25px;}
+img[alt=image200] { width: 200px;}
+img[alt=image10] {width: 10%;}
+img[alt=image20] {width: 20%;}
+img[alt=image30] {width: 30%;}
+img[alt=image40] {width: 40%;}
+img[alt=image50] { width: 50%;}
+img[alt=image60] {width: 60%;}
+img[alt=image70] {width: 70%;}
+img[alt=image80] {width: 80%;}
+img[alt=image90] { width: 90%;}
+.centrer{display:block; margin: auto auto;}
+.red{color: red}
+.blue{color: blue}
+.green{color: green}
+.purple{color: purple}
+/*.md-typeset .admonition {font-size: 0.8rem;}
+.md-typeset .admonition, .md-typeset details {font-size: 0.8rem;}
+/*.MathJax_CHTML {
+    font-size: 120% !important;
+}
+.MathJax {
+    font-size: 1.3em;
+    }*/
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.md-typeset div.arithmatex  {
+    overflow: initial;
+}
+
+/*.md-typeset .admonition {
+    font-size: 0.8rem;
+}
+
+.md-typeset details {
+    font-size: 0.8rem;
+}
+body {font-size: 0.8rem;}*/
+div.mermaid {
+    text-align: center;
+}
+a.md-button {text-align: center;}
+iframe {display:block; margin: auto auto;}
+:root {
+    --md-admonition-icon--histoire: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.643 3.143.427 1.927A.25.25 0 0 0 0 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 0 0 .177-.427L2.715 4.215a6.5 6.5 0 1 1-1.18 4.458.75.75 0 1 0-1.493.154 8.001 8.001 0 1 0 1.6-5.684zM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.75.75 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4z"></path></svg>')
+  }
+  .md-typeset .admonition.histoire,
+  .md-typeset details.histoire {
+    border-color: rgb(184, 83, 11);
+  }
+  .md-typeset .histoire > .admonition-title,
+  .md-typeset .histoire > summary {
+    background-color: rgba(184, 83, 11, 0.1);
+  }
+  .md-typeset .histoire > .admonition-title::before,
+  .md-typeset .histoire > summary::before {
+    background-color: rgb(184, 83, 11);
+    -webkit-mask-image: var(--md-admonition-icon--histoire);
+            mask-image: var(--md-admonition-icon--histoire);
+  }
+  

@@ -1,0 +1,9 @@
+title: 1. Modèle d'architecture de von Neumann
+nav:
+    - 1. Évolution des ordinateurs: neumann_cours_1.md
+    - 2. Du transistor au processeur: neumann_cours_2.md
+    - 3. Architecture de von Neumann: neumann_cours_3.md
+    - 4. Langage machine - Assembleur: neumann_cours_4.md
+    - Exercices (von Neumann): neumann_exos.md
+    - TP - Simulateur AQA: neumann_TP.md
+    - L'essentiel: neumann_essentiel.md
