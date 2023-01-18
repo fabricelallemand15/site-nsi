@@ -62,31 +62,4 @@ iframe {display:block; margin: auto auto;}
     -webkit-mask-image: var(--md-admonition-icon--histoire);
             mask-image: var(--md-admonition-icon--histoire);
   }
-
-th {
-    border: 1px solid var(--md-typeset-table-color);
-    border-spacing: 0;
-    border-bottom: none;
-    border-left: none;
-    border-top: none;
-    background-color: beige;
-    color: rgb(0, 0, 0);
-}
-
-  td {
-    border: 1px solid var(--md-typeset-table-color);
-    border-spacing: 0;
-    border-bottom: none;
-    border-left: none;
-    border-top: none;
-}
-
-.md-typeset__scrollwrap {
-    display: flex;
-    align-content: center;
-} 
-
-.md-typeset__table {
-    line-height: 1;
-    margin: auto auto;
-} 
+  

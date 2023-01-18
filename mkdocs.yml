@@ -2,8 +2,8 @@ site_name: Bloc-notes NSI
 site_author: Fabrice Lallemand
 site_description: Site personnel de Fabrice Lallemand, professeur agrégé de mathématiques
 site_url: https://nsi.flallemand.fr
-repo_url: https://gitlab.com/sites32/site_nsi
-repo_name: sources sur GitLab
+repo_url: https://github.com/fabricelallemand15/site-nsi
+repo_name: sources sur GitHub
 edit_uri: ""
 
 
@@ -15,7 +15,7 @@ theme:
     favicon: assets/images/favicon.ico
     logo: assets/images/favicon.ico
     icon:
-      repo: fontawesome/brands/gitlab
+      repo: fontawesome/brands/github
     palette:  # Palettes de couleurs jour/nuit
       - media: "(prefers-color-scheme: dark)"
         scheme: slate
