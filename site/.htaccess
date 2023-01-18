@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^nsi\.flallemand\.fr$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.nsi\.flallemand\.fr$
+RewriteRule ^/?$ "https\:\/\/flallemand\.fr\/nsi\/" [R=301,L]
+

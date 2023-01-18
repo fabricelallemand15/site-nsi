@@ -1,0 +1,21 @@
+Wikipedia:Pięć filarów
+
+1. Wikipedia to encyklopedia
+
+Zawiera w sobie hasła (opisywane tematy) na wzór publikowanych w encyklopediach powszechnych, specjalistycznych i różnego rodzaju almanachach. Nie jest miejscem do zamieszczania tekstów źródłowych, terminów słownikowych, ogłoszeń, artykułów promocyjnych, wspomnień, propagowania swojego światopoglądu, tworzenia katalogów odsyłaczy ani miejscem, gdzie można umieszczać strony WWW. Nie jest także miejscem do zamieszczania własnych opinii, argumentów i doświadczeń osobistych - wszyscy autorzy muszą przestrzegać zasady nieprzedstawiania twórczości własnej (dociekań, badań itp.). Wszyscy autorzy powinni dążyć do precyzji i zgodności ze źródłami.
+ 
+2. Wikipedia to neutralny punkt widzenia
+
+Artykuły nie wspierają żadnego określonego punktu widzenia. W tematach spornych wymagane jest przedstawienie możliwie wszystkich aspektów w taki sposób, by każdy z nich był opisany rzetelnie i aby czytelnik nie miał wątpliwości, komu należy przypisać określone opinie oraz by żadnemu z tych przekonań nie była przyznana jednoznaczna racja. Wsparciem w zachowaniu neutralności jest tworzenie weryfikowalnych treści artykułów na podstawie opublikowanych wiarygodnych źródeł zawsze kiedy to tylko możliwe i unikanie mniej wiarygodnych, zwłaszcza w artykułach na tematy kontrowersyjne. Kiedy wybucha konflikt o zawartość artykułu, należy czasowo zrezygnować z jego edycji po to, aby spokojnie i merytorycznie wypracować jego neutralną treść na przykład na stronie dyskusji tego artykułu.
+ 
+3. Wikipedia to wolny zbiór wiedzy
+
+Wszyscy autorzy Wikipedii udostępniają czytelnikom swoją twórczość na wolnych licencjach (w szczególności CC-BY-SA 3.0 i GNU Free Documentation License (GFDL) oraz domeny publicznej), nikt nie może rościć sobie wyłącznego prawa własności artykułów, a wkład każdego autora może być swobodnie przetwarzany i rozpowszechniany. Nie wolno umieszczać w Wikipedii materiałów w sposób naruszający prawa autorskie, w szczególności zakazane są plagiaty cudzych prac.
+ 
+4. Wikipedia to przestrzeganie netykiety
+
+Uczestnictwo w tworzeniu artykułów to również szacunek wobec innych autorów Wikipedii, kulturalne zachowywanie się, unikanie osobistych ataków i nieuzasadnionych uogólnień, zachowywanie spokoju, gdy edytowanie nadmiernie rozgrzewa emocje, unikanie wojen edycyjnych, nieużywanie dodatkowych kont (tzw. pacynek) do omijania uregulowań Wikipedii, utrzymywanie otwartości i chęci do współpracy. Pozytywnie jest oceniana dobra wola i zakładanie jej u innych oraz twórcze współdziałanie w rozwijaniu artykułów, a nie udowodnianie swoich racji.
+ 
+5. Wikipedia to brak sztywnych reguł
+
+Poza niniejszymi podstawami w Wikipedii nie ma sztywnych uregulowań (dopuszczalna jest w drodze konsensu redakcja interpretacji podstaw). Można śmiało modyfikować strony dla samej przyjemności edytowania i choć zmiany powinny mieć jakiś zamierzony cel, to nie jest wymagana od nikogo perfekcja * wszystkie wersje stron są przechowywane i można do nich zawsze wrócić, żadna edycja nie uszkadza trwale zawartości strony. Należy równocześnie pamiętać, że cokolwiek tu zostanie napisane * może zostać zachowane na zawsze.

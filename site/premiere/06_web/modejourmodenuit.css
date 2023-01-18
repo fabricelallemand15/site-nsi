@@ -1,0 +1,13 @@
+html{
+    background-color: rgb(81, 76, 164);
+}
+body{
+    width: 80%;
+    background-color:rgb(238, 238, 229);
+    margin: 0 auto;
+    padding: 2em;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}

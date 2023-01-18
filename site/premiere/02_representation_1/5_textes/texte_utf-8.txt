@@ -1,0 +1,4 @@
+Ceci est un fichier texte
+encodé au format UTF-8 étendu
+Voici quelques mots avec des caractères spéciaux
+comme par exemple forçat ou encore Niño ...

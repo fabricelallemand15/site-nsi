@@ -1,0 +1,4861 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Site personnel de Fabrice Lallemand, professeur agrégé de mathématiques">
+      
+      
+        <meta name="author" content="Fabrice Lallemand">
+      
+      
+        <link rel="canonical" href="https://nsi.flallemand.fr/premiere/07_tables/tables_cours/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../quiz/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>Traitement des données en table (cours) - Bloc-notes NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+<!--
+<script type="text/javascript" src="https://cache.consentframework.com/js/pa/29866/c/cac5G/stub" referrerpolicy="unsafe-url" charset="utf-8"></script>
+<script type="text/javascript" src="https://choices.consentframework.com/js/pa/29866/c/cac5G/cmp" referrerpolicy="unsafe-url" charset="utf-8" async></script>
+-->
+
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S92XT8C35G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S92XT8C35G');
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-table-de-donnees-et-indexation" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Bloc-notes NSI" class="md-header__button md-logo" aria-label="Bloc-notes NSI" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bloc-notes NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Traitement des données en table (cours)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="red"  aria-label="Passer au mode jour"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Passer au mode jour" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="red"  aria-label="Passer au mode nuit"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Passer au mode nuit" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/sites32/site_nsi" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sources sur GitLab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Accueil
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Première (NSI)
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../terminale/" class="md-tabs__link">
+        Terminale (NSI)
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../histoire/" class="md-tabs__link">
+      Histoire
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ressources/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://python.flallemand.fr" class="md-tabs__link">
+      Console Python
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://notebook.flallemand.fr" class="md-tabs__link">
+      Jupyter Notebook
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://flallemand.fr/wp" class="md-tabs__link">
+      Blog
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bloc-notes NSI" class="md-nav__button md-logo" aria-label="Bloc-notes NSI" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    Bloc-notes NSI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/sites32/site_nsi" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sources sur GitLab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../..">Accueil</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Accueil" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Accueil
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags-index/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mentions/" class="md-nav__link">
+        Mentions légales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../politique_conf/" class="md-nav__link">
+        Politique de confidentialité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Première (NSI)</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Première (NSI)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première (NSI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../01_langages/">S1-Langages et programmation</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S1-Langages et programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          S1-Langages et programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_2" tabindex="0" aria-expanded="false">
+          1. Python, les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Python, les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Python, les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases/" class="md-nav__link">
+        Les bases de Python (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases_exos_1/" class="md-nav__link">
+        Exercices (1)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases_exos_2/" class="md-nav__link">
+        Exercices (2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases_exos_3/" class="md-nav__link">
+        Exercices (3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases_exos_4/" class="md-nav__link">
+        Exercices (4)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/python_bases_quiz/" class="md-nav__link">
+        Quiz sur les bases de Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/1_bases/supplements/" class="md-nav__link">
+        Exercices supplémentaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_3" tabindex="0" aria-expanded="false">
+          2. Spécification et mise au point
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Spécification et mise au point" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Spécification et mise au point
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/2_specif/specif_tests/" class="md-nav__link">
+        Spécification et mise au point (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/2_specif/specif_tests_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/2_specif/specif_quiz/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/2_specif/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_4" tabindex="0" aria-expanded="false">
+          3. Diversité et unité des langages de programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Diversité et unité des langages de programmation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Diversité et unité des langages de programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/3_langages/langages/" class="md-nav__link">
+        3. Diversité et unité des langages de programmation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/3_langages/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_langages/4_TP_rue/" class="md-nav__link">
+        T.P. Collectif "Dessine ta rue"
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../02_representation_1/">S2-Représentation de données - types et valeurs de base</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S2-Représentation de données - types et valeurs de base" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          S2-Représentation de données - types et valeurs de base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" tabindex="0" aria-expanded="false">
+          1-Représentation des entiers naturels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1-Représentation des entiers naturels" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1-Représentation des entiers naturels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/1_naturels/naturels_cours/" class="md-nav__link">
+        1. Représentation des entiers naturels (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/1_naturels/naturels_exos/" class="md-nav__link">
+        Exercices (naturels)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/1_naturels/naturels_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3" tabindex="0" aria-expanded="false">
+          2. Représentation des entiers relatifs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Représentation des entiers relatifs" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représentation des entiers relatifs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/2_relatifs/relatifs_cours/" class="md-nav__link">
+        2. Représentation des entiers relatifs (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/2_relatifs/relatifs_exos/" class="md-nav__link">
+        Exercices (relatifs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/2_relatifs/relatifs_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4" tabindex="0" aria-expanded="false">
+          3. Représentation des réels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Représentation des réels" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Représentation des réels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/3_reels/flottants_cours/" class="md-nav__link">
+        3. Représentation des réels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/3_reels/flottants_exos/" class="md-nav__link">
+        Exercices (flottants)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/3_reels/flottants_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/mini_tp_nombres/" class="md-nav__link">
+        TP : Bases 2, 10 et 16 en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_6" type="checkbox" id="__nav_2_3_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_6" tabindex="0" aria-expanded="false">
+          4. Booléens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Booléens" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          4. Booléens
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/4_booleens/booleens_cours/" class="md-nav__link">
+        4. Booléens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/4_booleens/booleens_exos/" class="md-nav__link">
+        Exercices (booléens)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/4_booleens/booleens_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_3_7" type="checkbox" id="__nav_2_3_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_7" tabindex="0" aria-expanded="false">
+          5. Représentation d'un texte
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Représentation d'un texte" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          5. Représentation d'un texte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/5_textes/textes_cours/" class="md-nav__link">
+        5. Représentation d'un texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/5_textes/textes_exercices/" class="md-nav__link">
+        Exercices (texte)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_representation_1/5_textes/textes_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../03_archi_SE/">S3-Architectures matérielles et systèmes d'exploitation</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S3-Architectures matérielles et systèmes d'exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          S3-Architectures matérielles et systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4_2" type="checkbox" id="__nav_2_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_2" tabindex="0" aria-expanded="false">
+          1. Modèle d'architecture de von Neumann
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Modèle d'architecture de von Neumann" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Modèle d'architecture de von Neumann
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_cours_1/" class="md-nav__link">
+        1. Évolution des ordinateurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_cours_2/" class="md-nav__link">
+        2. Du transistor au processeur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_cours_3/" class="md-nav__link">
+        3. Architecture de von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_cours_4/" class="md-nav__link">
+        4. Langage machine - Assembleur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/exos_circuits/" class="md-nav__link">
+        T.P. (circuits)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_exos/" class="md-nav__link">
+        Exercices (von Neumann)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_TP/" class="md-nav__link">
+        TP - Simulateur AQA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/1_neumann/neumann_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3" tabindex="0" aria-expanded="false">
+          2. Systèmes d'exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Systèmes d'exploitation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/2_SE/SE_cours/" class="md-nav__link">
+        2. Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/2_SE/SE_exos/" class="md-nav__link">
+        Exercices (SE)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_archi_SE/2_SE/SE_essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../04_representation_2/">S4-Représentation de données - types construits</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S4-Représentation de données - types construits" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          S4-Représentation de données - types construits
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/p_uplets/" class="md-nav__link">
+        1. p-uplets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/tableaux/" class="md-nav__link">
+        2. Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/dicos/" class="md-nav__link">
+        3. Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/quiz/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/exos_tuples/" class="md-nav__link">
+        Exercices sur les p_uplets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/exos_tabs/" class="md-nav__link">
+        Exercices sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/exos_dicos/" class="md-nav__link">
+        Exercices sur les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_representation_2/enonce/" class="md-nav__link">
+        Mini-projet Stéganographie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../06_web/">S5-Interactions Homme-Machine sur le web</a>
+          
+            <label for="__nav_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S5-Interactions Homme-Machine sur le web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          S5-Interactions Homme-Machine sur le web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/acti1_HTML/" class="md-nav__link">
+        Activité 1 : Page web et langage HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/cours_HTML/" class="md-nav__link">
+        HTML : Explications et compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/ref_HTML/" class="md-nav__link">
+        Référence des principales balises HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/acti2_CSS/" class="md-nav__link">
+        Activité 2 : Le couple HTML/CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/cours_CSS/" class="md-nav__link">
+        CSS : Explications et compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/acti3_Javascript/" class="md-nav__link">
+        Activité 3 : Page Web interactive avec Javascript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/cours_JS/" class="md-nav__link">
+        Javascript : Explications et compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/cours_HTTP/" class="md-nav__link">
+        HTTP : Explications et compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/Exos_HTTP/" class="md-nav__link">
+        Exercices : le protocole HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/acti4_forms/" class="md-nav__link">
+        Activité 4 : Formulaires Web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/cours_forms/" class="md-nav__link">
+        Formulaires : Explications et compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/exos_forms/" class="md-nav__link">
+        Exercice : Formulaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_web/TP_forms/" class="md-nav__link">
+        T.P. Formulaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algos_1/" class="md-nav__link">
+        05-Algorithmique (1)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">S7-Traitement de données en tables</a>
+          
+            <label for="__nav_2_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S7-Traitement de données en tables" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          S7-Traitement de données en tables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Traitement des données en table (cours)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Traitement des données en table (cours)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-table-de-donnees-et-indexation" class="md-nav__link">
+    1. Table de données et indexation
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Table de données et indexation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-vocabulaire" class="md-nav__link">
+    1.1. Vocabulaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-echange-de-table-de-donnees-avec-un-fichier-csv" class="md-nav__link">
+    1.2. Échange de table de données avec un fichier CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-manipulation-de-fichiers-csv-en-python" class="md-nav__link">
+    1.3. Manipulation de fichiers CSV en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avec-un-tableau-de-tableaux" class="md-nav__link">
+    Avec un tableau de tableaux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avec-un-tableau-de-dictionnaires" class="md-nav__link">
+    Avec un tableau de dictionnaires
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recherche-dans-une-table" class="md-nav__link">
+    2. Recherche dans une table
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Recherche dans une table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-selection" class="md-nav__link">
+    Exemple de sélection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-projection" class="md-nav__link">
+    Exemple de projection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tri-dune-table" class="md-nav__link">
+    3. Tri d'une table
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tri d'une table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tri-dune-table-selon-une-colonne" class="md-nav__link">
+    3.1. Tri d'une table selon une colonne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tri-suivant-plusieurs-colonnes" class="md-nav__link">
+    3.2. Tri suivant plusieurs colonnes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fusion-de-deux-tables" class="md-nav__link">
+    4. Fusion de deux tables
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Fusion de deux tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-fusion-de-deux-tables-de-meme-structure" class="md-nav__link">
+    4.1. Fusion de deux tables de même structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-fusion-de-deux-tables-pour-un-meme-attribut" class="md-nav__link">
+    4.2. Fusion de deux tables pour un même attribut
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_algos_2/" class="md-nav__link">
+        08-Algorithmique (2)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09_reseaux/" class="md-nav__link">
+        S9-Réseaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10_IHM/" class="md-nav__link">
+        10-Interfaces Homme-Machine
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/">Terminale (NSI)</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Terminale (NSI)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale (NSI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/01_langages/">S1-Langages et programmation</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S1-Langages et programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          S1-Langages et programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" tabindex="0" aria-expanded="false">
+          01-Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="01-Récursivité" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          01-Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/01_recursivite/recursivite/" class="md-nav__link">
+        Récursivité (Cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/01_recursivite/recurs_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/01_recursivite/tp_hanoi/" class="md-nav__link">
+        TP Tours de Hanoï
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/01_recursivite/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3" tabindex="0" aria-expanded="false">
+          02-Programmation Orientée Objets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="02-Programmation Orientée Objets" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          02-Programmation Orientée Objets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/02_POO/POO/" class="md-nav__link">
+        POO (Cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/02_POO/POO_complements/" class="md-nav__link">
+        Compléments sur la POO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/02_POO/POO_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/02_POO/TP_POO/" class="md-nav__link">
+        TP Bataille
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/02_POO/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4" tabindex="0" aria-expanded="false">
+          03-Paradigmes de programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="03-Paradigmes de programmation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          03-Paradigmes de programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/03_paradigmes/paradigmes/" class="md-nav__link">
+        Paradigmes de programmation (Cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/03_paradigmes/paradigmes_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/03_paradigmes/paradigmes_quiz/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/01_langages/03_paradigmes/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/02_structures/">S2-Structures de données</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S2-Structures de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          S2-Structures de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/interfaces/" class="md-nav__link">
+        1-Interfaces et implémentations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" tabindex="0" aria-expanded="false">
+          2-Listes, Piles et Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2-Listes, Piles et Files" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2-Listes, Piles et Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/listes_piles_files/listes/" class="md-nav__link">
+        2.1. Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/listes_piles_files/piles/" class="md-nav__link">
+        2.2. Piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/listes_piles_files/files/" class="md-nav__link">
+        2.3. Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/listes_piles_files/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_4" tabindex="0" aria-expanded="false">
+          3-Dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3-Dictionnaires" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3-Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/dictionnaires/dictionnaires/" class="md-nav__link">
+        3-Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/dictionnaires/dicos_exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/dictionnaires/dicos_TP/" class="md-nav__link">
+        T. P.
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/projet1/" class="md-nav__link">
+        Projet : détecteur de la langue d'un texte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/02_structures/bilan/" class="md-nav__link">
+        Bilan de la séquence : Structures de données abstraites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/03_BDD/">S3-Bases de données</a>
+          
+            <label for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S3-Bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          S3-Bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_2" type="checkbox" id="__nav_3_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_2" tabindex="0" aria-expanded="false">
+          1. Modèle relationnel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Modèle relationnel" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Modèle relationnel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/modele_relationnel/intro/" class="md-nav__link">
+        1.1. Introduction, SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/modele_relationnel/modele_relationnel/" class="md-nav__link">
+        1.2. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/modele_relationnel/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/modele_relationnel/quiz/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_3" type="checkbox" id="__nav_3_4_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_3" tabindex="0" aria-expanded="false">
+          2. Langage SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Langage SQL" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Langage SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/SQL/sql/" class="md-nav__link">
+        2. Langage SQL (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/SQL/essentiel/" class="md-nav__link">
+        L'essentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/exos/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/TP1/" class="md-nav__link">
+        T.P.1 - Créer une base de données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/TP2/" class="md-nav__link">
+        T.P.2 - Le supermarché
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/03_BDD/TP3/" class="md-nav__link">
+        T.P.3 - BDD et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/04_arbres/">S4-Arbres</a>
+          
+            <label for="__nav_3_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S4-Arbres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          S4-Arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/04_arbres/arbres/" class="md-nav__link">
+        Arbres (cours)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/04_arbres/exos_arbres/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/04_arbres/implementation/" class="md-nav__link">
+        Implémentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/04_arbres/TP_arbres/" class="md-nav__link">
+        T.P. Manipulations d'arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/05_archi_SE/">S5-Architectures matérielles et systèmes d'exploitation</a>
+          
+            <label for="__nav_3_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S5-Architectures matérielles et systèmes d'exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          S5-Architectures matérielles et systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_6_2" type="checkbox" id="__nav_3_6_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6_2" tabindex="0" aria-expanded="false">
+          S5-Processus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="S5-Processus" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          S5-Processus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/05_archi_SE/processus/processus_cours/" class="md-nav__link">
+        Processus : cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/05_archi_SE/processus/TP_Linux/" class="md-nav__link">
+        T.P. : Processus sous Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/05_archi_SE/processus/exos_processus/" class="md-nav__link">
+        Exercices type bac : Processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/05_archi_SE/processus/demo_processus_python/" class="md-nav__link">
+        Processus sous Linux et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/06_algo_1/">S6-Algorithmique</a>
+          
+            <label for="__nav_3_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S6-Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          S6-Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/06_algo_1/rappels/" class="md-nav__link">
+        S6 - Rappels d'algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_7_3" type="checkbox" id="__nav_3_7_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_3" tabindex="0" aria-expanded="false">
+          S6 - Ch. 1 Algorithmes sur les arbres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="S6 - Ch. 1 Algorithmes sur les arbres" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          S6 - Ch. 1 Algorithmes sur les arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/06_algo_1/algos_arbres/cours/" class="md-nav__link">
+        S6 - Ch. 1 Algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/06_algo_1/algos_arbres/exos/" class="md-nav__link">
+        S6 - Ch. 1 Algorithmes sur les arbres - Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_7_4" type="checkbox" id="__nav_3_7_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_4" tabindex="0" aria-expanded="false">
+          S6 - Ch. 2 Méthode "Diviser pour régner"
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="S6 - Ch. 2 Méthode "Diviser pour régner"" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          S6 - Ch. 2 Méthode "Diviser pour régner"
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/06_algo_1/diviser_pour_regner/cours/" class="md-nav__link">
+        S6 - Ch. 2 Méthode "Diviser pour régner"
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/06_algo_1/diviser_pour_regner/exos/" class="md-nav__link">
+        S6 - Ch. 2 Méthode "Diviser pour régner" - Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../terminale/07_reseaux/">S7-Réseaux</a>
+          
+            <label for="__nav_3_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="S7-Réseaux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          S7-Réseaux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/07_reseaux/cours_routage/" class="md-nav__link">
+        Chapitre 1 - Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/07_reseaux/exos_routage/" class="md-nav__link">
+        Chapitre 1 - Routage - Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/08_complements/" class="md-nav__link">
+        08-Compléments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/annales/" class="md-nav__link">
+        Sujets épreuve écrite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../terminale/epreuve_pratique/" class="md-nav__link">
+        Sujets épreuve pratique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../histoire/" class="md-nav__link">
+        Histoire
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ressources/">Ressources</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/python_IDE/" class="md-nav__link">
+        Éditeurs de code pour Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/spyder/" class="md-nav__link">
+        Prise en main de Spyder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/exos/" class="md-nav__link">
+        Exercices en ligne
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/Sources/" class="md-nav__link">
+        Sources utilisées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://python.flallemand.fr" class="md-nav__link">
+        Console Python
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://notebook.flallemand.fr" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://flallemand.fr/wp" class="md-nav__link">
+        Blog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+                  
+  
+
+
+
+
+
+  <h1>Traitement des données en table (cours)</h1>
+
+<h2 id="1-table-de-donnees-et-indexation">1. Table de données et indexation<a class="headerlink" href="#1-table-de-donnees-et-indexation" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-vocabulaire">1.1. Vocabulaire<a class="headerlink" href="#11-vocabulaire" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Des données, numériques ou non, sont souvent représentées sous forme de tableaux, ou <strong>tables</strong>.</p>
+<p><strong>Vocabulaire :</strong></p>
+<ul>
+<li>Une <strong>table</strong>, représentée sous forme de tableau, est une collection d'éléments qui sont les lignes du tableau.</li>
+<li>Chaque élément de la <strong>table</strong>, ou ligne de sa représentation sous forme de tableau, s'appelle un <strong>enregistrement</strong>.    </li>
+<li>Tous les  <strong>enregistrements</strong> d'une même <strong>table</strong> sont des  <strong>p-uplets nommés</strong> qui partagent les mêmes <strong>descripteurs</strong>, appelés aussi <strong>attributs</strong>. Dans une représentation de la <strong>table</strong> sous forme de tableau, chaque <strong>attribut</strong> correspond à une colonne. Chaque <strong>attribut</strong> est caractérisé par son <strong>type</strong> et son  <strong>domaine de valeurs</strong> (les valeurs que peut prendre cet attribut).    </li>
+<li>Dans une représentation sous forme de tableau, les <strong>descripteurs</strong> ou <strong>attributs</strong> sont en général placés comme en-tête de colonnes sur la première ligne.</li>
+</ul>
+</div>
+<p><img alt="tableur" src="../../../assets/images/tableur.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>La table représentée ci-dessus est affichée dans un tableur. Nous voyons les 20 premiers enregistrements de cette table qui rassemble des données sur tous les établissements scolaires primaires et secondaires dans le Cantal (source : <a href="https://www.data.gouv.fr/fr/">https://www.data.gouv.fr/fr/</a>). </p>
+<p>Les attributs de cette table sont :</p>
+<ul>
+<li>le <em>code</em> UAI (Unité Administrative Immatriculée) avec un domaine de valeurs particulier ;</li>
+<li>le <em>nom</em> avec pour domaine de valeur les chaînes de caractères ;</li>
+<li>le <em>statut</em> avec pour domaine de valeur les deux chaînes {"Public", "Privé"} ;</li>
+<li>le <em>codepostal</em> avec un domaine de valeurs particulier ;</li>
+<li>la <em>commune</em> avec pour domaine de valeur les chaînes de caractères ;</li>
+<li>la <em>latitude</em> et la <em>longitude</em> avec pour domaine de valeur les flottants.</li>
+</ul>
+</div>
+<h3 id="12-echange-de-table-de-donnees-avec-un-fichier-csv">1.2. Échange de table de données avec un fichier CSV<a class="headerlink" href="#12-echange-de-table-de-donnees-avec-un-fichier-csv" title="Permanent link">⚓︎</a></h3>
+<p>Pour échanger des <strong>données tabulaires</strong>  entre les programmes qui doivent les manipuler, on les exporte puis les importe sous la forme de fichiers textes, c'est-à-dire lisibles par l'être humain.  </p>
+<p>Afin d'assurer l'interopérabilité entre différents programmes, un fichier doit respecter un <strong>format</strong> normalisé.</p>
+<p>L'un des formats les plus répandus pour l'échange de <strong>données tabulaires</strong> est le format <a href="https://fr.wikipedia.org/wiki/Comma-separated_values">CSV</a> pour <em>Comma Separated Values</em> :</p>
+<ul>
+<li>un fichier <a href="https://fr.wikipedia.org/wiki/Comma-separated_values">CSV</a> est un fichier texte donc éditable avec un éditeur de textes comme <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>. On peut aussi l'éditer dans un tableur ;</li>
+<li>chaque ligne du fichier correspond à un <strong>enregistrement</strong> de la table ;</li>
+<li>pour un  <strong>enregistrement</strong> donné, les valeurs des différents <strong>attributs</strong> sont séparées en <strong>champs</strong> par un <strong>délimiteur</strong> qui est en général l'un des symboles <code>,</code> ou <code>;</code> ou <code>:</code> ;</li>
+<li>la première ligne contient en général les noms des <strong>attributs</strong>.</li>
+</ul>
+<p>Voici la même table que celle qui est affichée dans un tableur ci-dessus, au format CSV :</p>
+<div class="highlight"><span class="filename">CSV</span><pre><span></span><code>code,nom,statut,codepostal,commune,latitude,longitude
+0150424E,Ecole maternelle de La Fontaine,Public,15000,AURILLAC,44.93215113696133,2.4472797795526975
+0150426G,Ecole élémentaire La Jordanne,Public,15000,AURILLAC,44.91746484780829,2.4412899019318455
+0150713U,Ecole élémentaire Belbex,Public,15000,AURILLAC,44.91692385174704,2.420740047835959
+0150669W,Ecole élémentaire de Canteloube,Public,15000,AURILLAC,44.90604342702414,2.4320205660195438
+0150695Z,Ecole élémentaire Paul Doumer,Public,15000,AURILLAC,44.92315413405051,2.4369699098202613
+0150708N,Collège privé Gerbert,Privé,15000,AURILLAC,44.915101259869516,2.4353907452880663
+0150082H,Ecole élémentaire privée Externat de L&#39;Enfant-Jésus,Privé,15000,AURILLAC,44.925334485056936,2.4395702526084304
+0150430L,Ecole élémentaire Le Palais,Public,15000,AURILLAC,44.92790494767797,2.44295019912506
+0150431M,Ecole élémentaire Jean-Baptiste Rames,Public,15000,AURILLAC,44.92587579761087,2.443909493077494
+0150639N,Collège Jeanne de La Treilhe,Public,15000,AURILLAC,44.931332705102776,2.446920262863509
+0150340N,Ecole élémentaire Tivoli,Public,15000,AURILLAC,44.91458511629758,2.437120525044205
+0150420A,Ecole élémentaire des Frères Delmas,Public,15000,AURILLAC,44.93257502395094,2.448510197138493
+0150427H,Ecole élémentaire Les Alouettes,Public,15000,AURILLAC,44.931185754042616,2.4377296545614717
+0150760V,Lycée Polyvalent privé Gerbert,Privé,15000,AURILLAC,44.91492261677949,2.435849985504045
+0150761W,Section d&#39;enseignement professionnel du Lycée privé Gerbert,Privé,15000,AURILLAC,44.91510125343173,2.435389478195114
+0150773J,Ecole élementaire privée La Calandreta del Vernhat,Privé,15000,AURILLAC,44.90477730883497,2.434630577068397
+0150006A,Lycée polyvalent Monnet-Mermoz - Lycée des métiers des sciences et techniques appliquées à l&#39;industrie et aux services,Public,15005,AURILLAC CEDEX,44.93647192501501,2.4525295902159927
+0150036H,Section d&#39;enseignement professionnel du Lycée Monnet-Mermoz,Public,15005,AURILLAC CEDEX,44.93588796606886,2.451329778620416
+0150646W,Lycée général Emile Duclaux,Public,15005,AURILLAC CEDEX,44.927782859640786,2.439440592922277
+</code></pre></div>
+<p>On observe que le délimiteur de champ est le symbole <code>,</code> et que les champs peuvent contenir des espaces.</p>
+<p>Dans un tel jeu de données, il peut y avoir des champs vides dans certains enregistrements et il se peut aussi que le nombre de champs pour un ne corresponde pas au nombre d'attributs ! Pour traiter un tel fichier avec un programme, il faut d'abord analyser sa structure, ses particularités et prévoir d'éventuelles irrégularités dans les données (absence, erreurs de type, de saisie, corruption du fichier ...). Le <strong>contrôle de la  validité</strong> des données doit donc être une composante du programme de traitement : recherche de doublons, tests de cohérence.</p>
+<h3 id="13-manipulation-de-fichiers-csv-en-python">1.3. Manipulation de fichiers CSV en Python<a class="headerlink" href="#13-manipulation-de-fichiers-csv-en-python" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p><strong>L'indexation de table</strong> est la création d'une structure de données à partir d'une table de données.</p>
+<p>L'indexation d'une table extraite d'un fichier CSV peut se faire vers une structure de données du langage Python : <strong>tableau de tableaux</strong> ou (mieux) <strong>tableau de dictionnaires</strong>.</p>
+</div>
+<p>Dans cette section, on considère le fichier <a href="https://fr.wikipedia.org/wiki/Comma-separated_values">CSV</a>,  <a href="../../../assets/CSV/educ_cantal.csv"><code>educ_cantal.csv</code></a>,  contenant les enregistrements des établissements scolaires primaires et secondaires dans le Cantal.</p>
+<p>Présentons deux méthodes de lecture de fichiers <a href="https://fr.wikipedia.org/wiki/Comma-separated_values">CSV</a> qui utilisent les outils standards de Python. </p>
+<p>On fait les hypothèses suivantes :  la première ligne du fichier contient les attributs
+et on connaît  le délimiteur, ici le symbole <code>,</code>.</p>
+<h3 id="avec-un-tableau-de-tableaux">Avec un tableau de tableaux<a class="headerlink" href="#avec-un-tableau-de-tableaux" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><strong>Lecture</strong></li>
+</ul>
+<p>On peut extraire les attributs et la  table contenus dans le fichier <code>educ_cantal.csv</code>  avec le code ci-dessous :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;educ_cantal.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># ouverture du fichier en mode lecture</span>
+<span class="n">attributs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>  <span class="c1"># extraction de la ligne des attributs</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">ligne</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">fichier</span><span class="p">]</span>  <span class="c1"># extraction des autres lignes</span>
+<span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># fermeture du fichier</span>
+</code></pre></div>
+<p>La fonction <code>open</code> permet de créer un objet <code>fichier</code> qu'on peut parcourir ligne par ligne avec un curseur : d'abord la première ligne avec <code>fichier.readline()</code> puis les lignes suivantes en itérant sur <code>fichier</code>. Il est important de préciser <strong>l'encodage du fichier</strong>, par défaut c'est celui du système d'exploitation.</p>
+<p>Chaque ligne est une chaîne de caractères découpée en liste de champs selon le délimiteur passé en paramètre à la méthode <code>split</code>. Le caractère de saut de lignes a d'abord été supprimé avec la méthode <code>rstrip</code>.</p>
+<p>On récupère ainsi les attributs comme un tableau de type <code>list</code> et la table comme un tableau d'enregistrements qui sont eux-mêmes des tableaux. Notons que toutes les valeurs sont des chaînes de caractères et qu'il faudra convertir certaines pour les traiter !</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">attributs</span>   <span class="c1"># tableau des attributs</span>
+<span class="go">[&#39;code&#39;, &#39;nom&#39;, &#39;statut&#39;, &#39;codepostal&#39;, &#39;commune&#39;, &#39;latitude&#39;, &#39;longitude&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span>   <span class="c1"># tableau 19ième enregistrement</span>
+<span class="go">[&#39;0150646W&#39;, &#39;Lycée général Emile Duclaux&#39;, &#39;Public&#39;, &#39;15005&#39;, &#39;AURILLAC CEDEX&#39;, &#39;44.927782859640786&#39;, &#39;2.439440592922277&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># tableau de tableaux : extrait</span>
+<span class="go">[[&#39;0150424E&#39;, &#39;Ecole maternelle de La Fontaine&#39;, &#39;Public&#39;, &#39;15000&#39;, &#39;AURILLAC&#39;, &#39;44.93215113696133&#39;, &#39;2.4472797795526975&#39;], [&#39;0150426G&#39;, &#39;Ecole élémentaire La Jordanne&#39;, &#39;Public&#39;, &#39;15000&#39;, &#39;AURILLAC&#39;, &#39;44.91746484780829&#39;, &#39;2.4412899019318455&#39;]]</span>
+</code></pre></div>
+<ul>
+<li><strong>Écriture</strong></li>
+</ul>
+<p>On peut ensuite recopier les attributs et la table dans un autre fichier <code>educ_cantal_copie.csv</code> avec le code ci-dessous :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;educ_cantal_copie.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># ouverture du fichier en mode écriture</span>
+<span class="n">premiere_ligne</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">attributs</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">premiere_ligne</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>La méthode <code>join</code> permet de concaténer les éléments d'un tableau de chaînes de caractères avec un délimiteur.</p>
+<ul>
+<li>Avec ces méthodes, une table est donc représentée par <strong>un tableau de tableaux</strong>. On accède à un enregistrement par son index dans la table et à la valeur d'un attribut par son index dans le tableau des attributs (séparé de la table). C'est incommode et  le code produit est peu lisible. Ainsi, pour accéder à l'adresse mail du premier enregistrement il faut saisir <code>table[0][2]</code>. On aimerait écrire <code>table[0]['email']</code>. Pour cela, chaque enregistrement devrait être un p-uplet nommé que nous représenterons par dictionnaire avec pour clefs les attributs de la table. C'est possible en utilisant le <a href="https://docs.python.org/fr/3/library/csv.html">module <code>csv</code></a>.</li>
+</ul>
+<h3 id="avec-un-tableau-de-dictionnaires">Avec un tableau de dictionnaires<a class="headerlink" href="#avec-un-tableau-de-dictionnaires" title="Permanent link">⚓︎</a></h3>
+<p>Le <a href="https://docs.python.org/fr/3/library/csv.html">module <code>csv</code></a>  est disponible dans la bibliothèque standard et peut donc être  utilisé sans installation spécifique. À partir de la table contenu dans le même fichier CSV <code>'educ_cantal.csv'</code>, ce module permet de créer une structure de données d'un accès plus facile.</p>
+<ul>
+<li><strong>Lecture</strong></li>
+</ul>
+<p>Le code ci-dessous permet d'extraire directement la table d'un fichier CSV dans une structure de données qui est un <strong>tableau de dictionnaires</strong> : chaque enregistrement est un dictionnaire dont les clefs sont les attributs listés sur la première ligne du fichier.</p>
+<p>Remarque: pour les versions de Python 3.6 et 3.7 uniquement, les dictionnaires renvoyés sont spécifiques, de type <code>OrderedDict</code>, et on prendra soin de les convertir en dictionnaires standard avec <code>dict</code> en entrant : <code>table = [dict(enregistrement) for ...]</code>.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;educ_cantal.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>  <span class="c1"># création d&#39;un objet reader</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">enregistrement</span> <span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">]</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>La structure de données représentant la table est un <strong>tableau de dictionnaires</strong> : l'accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu'il faudra convertir certaines pour les traiter !</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span>    <span class="c1"># premier enregistrement de type dictionnaire</span>
+<span class="go">{&#39;code&#39;: &#39;0150646W&#39;, &#39;nom&#39;: &#39;Lycée général Emile Duclaux&#39;, &#39;statut&#39;: &#39;Public&#39;, &#39;codepostal&#39;: &#39;15005&#39;, &#39;commune&#39;: &#39;AURILLAC CEDEX&#39;, &#39;latitude&#39;: &#39;44.927782859640786&#39;, &#39;longitude&#39;: &#39;2.439440592922277&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># tableu de dictionnaires : extrait</span>
+<span class="go">[{&#39;code&#39;: &#39;0150424E&#39;, &#39;nom&#39;: &#39;Ecole maternelle de La Fontaine&#39;, &#39;statut&#39;: &#39;Public&#39;, &#39;codepostal&#39;: &#39;15000&#39;, &#39;commune&#39;: &#39;AURILLAC&#39;, &#39;latitude&#39;: &#39;44.93215113696133&#39;, &#39;longitude&#39;: &#39;2.4472797795526975&#39;}, {&#39;code&#39;: &#39;0150426G&#39;, &#39;nom&#39;: &#39;Ecole élémentaire La Jordanne&#39;, &#39;statut&#39;: &#39;Public&#39;, &#39;codepostal&#39;: &#39;15000&#39;, &#39;commune&#39;: &#39;AURILLAC&#39;, &#39;latitude&#39;: &#39;44.91746484780829&#39;, &#39;longitude&#39;: &#39;2.4412899019318455&#39;}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="go">203</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="p">[</span><span class="mi">18</span><span class="p">][</span><span class="s2">&quot;nom&quot;</span><span class="p">]</span>    <span class="c1"># accès facile aux valeurs des attributs par clefs</span>
+<span class="go">&#39;Lycée général Emile Duclaux&#39;</span>
+</code></pre></div>
+<ul>
+<li><strong>Écriture</strong></li>
+</ul>
+<p>L'écriture d'un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s'effectue de façon symétrique à travers un objet <code>DictWriter</code>. À titre, d'exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d'un dictionnaire est garanti dans le même ordre que celui d'insertion donc on peut récupérer la liste des attributs avec <code>list(table[0].keys())</code></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;educ_cantal_copie2.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">attributs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">attributs</span><span class="p">)</span>  <span class="c1"># création de l&#39;objet writer</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>  <span class="c1"># écriture des attributs</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">)</span>  <span class="c1"># écriture des enregistrements</span>
+<span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li><strong>Remarque</strong> </li>
+</ul>
+<p>Le module <code>csv</code> permet aussi d'extraire une table d'un fichier CSV sous forme de <strong>tableau de tableaux</strong> comme dans la méthode précédente. Le découpage des lignes/enregistrements selon le délimiteur est intégré ce qui simplifie le code.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;educ_cantal.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">ligne</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">]</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="2-recherche-dans-une-table">2. Recherche dans une table<a class="headerlink" href="#2-recherche-dans-une-table" title="Permanent link">⚓︎</a></h2>
+<p>Pour accéder aux données, il faut les rechercher et les regrouper suivant différents critères.</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<ul>
+<li>Lorsqu'on souhaite accéder à un ou plusieurs enregistrements vérifiant un critère, on réalise une <strong>sélection</strong>.</li>
+<li>Lorsqu'on souhaite accéder à toutes les données d'une colonne on réalise une <strong>projection</strong>.</li>
+</ul>
+</div>
+<h3 id="exemple-de-selection">Exemple de sélection<a class="headerlink" href="#exemple-de-selection" title="Permanent link">⚓︎</a></h3>
+<p>Supposons qu'on dispose d'une table enregistrée dans une liste de dictionnaires :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Table1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Joe&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;18&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;16&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Zoé&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;19&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Max&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;19&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;13&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;14&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;12&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;16&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16 en maths.</p>
+<p>On peut le faire "à la main" :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">au_moins_16_en_maths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">:</span>
+        <span class="n">au_moins_16_en_maths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">)</span>
+</code></pre></div>
+<p>Le résultat est encore une table :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">au_moins_16_en_maths</span>
+<span class="go">[{&#39;Nom&#39;: &#39;Joe&#39;, &#39;Anglais&#39;: &#39;17&#39;, &#39;Info&#39;: &#39;18&#39;, &#39;Maths&#39;: &#39;16&#39;}, {&#39;Nom&#39;: &#39;Zoé&#39;, &#39;Anglais&#39;: &#39;15&#39;, &#39;Info&#39;: &#39;17&#39;, &#39;Maths&#39;: &#39;19&#39;}]</span>
+</code></pre></div>
+<p>On peut le faire avec une liste en compréhension :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">au_moins_16_en_maths</span> <span class="o">=</span> <span class="p">[</span><span class="n">enre</span> <span class="k">for</span> <span class="n">enre</span> <span class="ow">in</span> <span class="n">Table1</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">]</span>
+</code></pre></div>
+<p>Le résultat est identique.</p>
+<h3 id="exemple-de-projection">Exemple de projection<a class="headerlink" href="#exemple-de-projection" title="Permanent link">⚓︎</a></h3>
+<p>Cette fois, on souhaite récupérer toutes les valeurs pour un champ donné, par exemple toutes les notes de mathématiques.</p>
+<p>L'approche est similaire, on crée une liste, on parcourt la table et on ajoute à la liste tous les éléments qui nous intéressent.</p>
+<ul>
+<li>
+<p>à la main :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">notes_maths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">:</span>
+    <span class="n">notes_maths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">])</span>
+</code></pre></div>
+</li>
+<li>
+<p>par compréhension :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">notes_maths</span> <span class="o">=</span> <span class="p">[</span><span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">enre</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">]</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Dans les deux cas le résultat est la liste ['16', '19', '14', '10'].</p>
+<div class="admonition question">
+<p class="admonition-title">Exercices</p>
+<ol>
+<li>Adapter la sélection afin de récupérer tous les enregistrements des élèves dont le nom comporte un "o".</li>
+<li>
+<p>Projeter afin de construire la liste des noms puis celle des paires de notes d'info et de maths :</p>
+<p>[(18, 16), (17, 19), (13, 14), (16, 10)]</p>
+</li>
+</ol>
+</div>
+<details class="success">
+<summary>Solution</summary>
+<ol>
+<li>
+<p>Avec une boucle :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">nom_avec_o</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;o&#39;</span> <span class="ow">in</span> <span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]:</span>
+        <span class="n">nom_avec_o</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">)</span>
+</code></pre></div>
+<p>En compréhension :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">nom_avec_o</span> <span class="o">=</span> <span class="p">[</span><span class="n">enre</span> <span class="k">for</span> <span class="n">enre</span> <span class="ow">in</span> <span class="n">Table1</span> <span class="k">if</span> <span class="s1">&#39;o&#39;</span> <span class="ow">in</span> <span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]]</span>
+</code></pre></div>
+</li>
+<li>
+<p>Liste des noms :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># avec une boucle</span>
+<span class="n">liste_noms</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">:</span>
+    <span class="n">liste_noms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">])</span>
+
+<span class="c1"># avec une liste en compréhension</span>
+<span class="n">liste_noms</span> <span class="o">=</span> <span class="p">[</span><span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">enre</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">]</span>
+</code></pre></div>
+<p>paires info/maths</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># avec une boucle</span>
+<span class="n">liste_paires</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">enregistrement</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">:</span>
+    <span class="n">liste_paires</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Info&#39;</span><span class="p">],</span> <span class="n">enregistrement</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">]))</span>
+
+<span class="c1"># avec une liste en compréhension</span>
+<span class="n">liste_paires</span> <span class="o">=</span> <span class="p">[(</span><span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Info&#39;</span><span class="p">],</span> <span class="n">enre</span><span class="p">[</span><span class="s1">&#39;Maths&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">enre</span> <span class="ow">in</span> <span class="n">Table1</span><span class="p">]</span>
+</code></pre></div>
+</li>
+</ol>
+</details>
+<h2 id="3-tri-dune-table">3. Tri d'une table<a class="headerlink" href="#3-tri-dune-table" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-tri-dune-table-selon-une-colonne">3.1. Tri d'une table selon une colonne<a class="headerlink" href="#31-tri-dune-table-selon-une-colonne" title="Permanent link">⚓︎</a></h3>
+<p>Il s'agit ici de trier les données d'une table selon un des attributs de la table, c'est-à-dire selon une colonne. Il faut bien sûr pour cela que les données de cet attribut soient "triables", c'est-à-dire qu'un ordre puisse être défini sur ces données. Pour des données numériques, on peut penser à l'ordre croissant ou à l'ordre décroissant. Pour des données textuelles, à l'ordre alphabétique. On peut aussi vouloir trier les données selon plusieurs champs.</p>
+<p>Nous allons pour cela utiliser la fonction Python <code>sorted</code> qui s'applique à un objet de type <code>list</code> et qui renvoie une nouvelle <code>list</code> triée. Outre la table à trier, cette fonction peut prendre deux arguments nommés facultatifs :</p>
+<ul>
+<li><code>reverse = True</code> pour un tri dans l'ordre inverse ;</li>
+<li><code>key = ...</code> pour préciser selon quel critère une liste doit être triée.</li>
+</ul>
+<p>Quelques exemples :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">96</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span>
+<span class="go">[3, 10, 71, 96]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">[96, 71, 10, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mes_couples</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">mes_couples</span><span class="p">)</span>     <span class="c1"># tuples triés selon leur premier élément (par défaut)</span>
+<span class="go">[(&#39;a&#39;, 3), (&#39;b&#39;, 1), (&#39;c&#39;, 5), (&#39;d&#39;, 2)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">couple</span><span class="p">):</span>    <span class="c1"># on définit une fonction qui retourne le second élément d&#39;un tuple</span>
+<span class="go">        return couple[1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">mes_couples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">y</span><span class="p">)</span> <span class="c1"># tuples triés selon leur second élément</span>
+<span class="go">[(&#39;b&#39;, 1), (&#39;d&#39;, 2), (&#39;a&#39;, 3), (&#39;c&#39;, 5)]</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Attention, <code>sorted</code> ne renvoie qu'une copie superficielle du tableau ! Si ses éléments sont des références et c'est le cas de l'implémentation des tables de données sous forme de tableaux de dictionnaires, il faut effectuer une copie profonde du tableau avec la fonction <code>deepcopy</code> du module <code>copy</code> pour obtenir une vraie copie triée du tableau initial : <code>sorted(deepcopy(tab), key = clef_tri)</code>.</p>
+</div>
+<h3 id="32-tri-suivant-plusieurs-colonnes">3.2. Tri suivant plusieurs colonnes<a class="headerlink" href="#32-tri-suivant-plusieurs-colonnes" title="Permanent link">⚓︎</a></h3>
+<p>Considérons la table suivante : </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">table</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;élève&#39;</span> <span class="p">:</span> <span class="s1">&#39;guido&#39;</span><span class="p">,</span> <span class="s1">&#39;langage&#39;</span> <span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;note&#39;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+         <span class="p">{</span><span class="s1">&#39;élève&#39;</span> <span class="p">:</span> <span class="s1">&#39;monty&#39;</span><span class="p">,</span> <span class="s1">&#39;langage&#39;</span> <span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;note&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">},</span>
+         <span class="p">{</span><span class="s1">&#39;élève&#39;</span> <span class="p">:</span> <span class="s1">&#39;brian&#39;</span><span class="p">,</span> <span class="s1">&#39;langage&#39;</span> <span class="p">:</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;note&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">}]</span>
+</code></pre></div>
+<p>On souhaite trier en fonction du langage dans l'ordre alphabétique, puis de la note dans l'ordre croissant. La fonction donnée en argument <code>key</code> doit alors retourner la couple ordonné des deux attributs voulus :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">cle_langage_note</span><span class="p">(</span><span class="n">enre</span><span class="p">):</span>
+<span class="go">        return (enre[&#39;langage&#39;], enre[&#39;note&#39;])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">cle_langage_note</span><span class="p">)</span>
+<span class="go">[{&#39;élève&#39;: &#39;brian&#39;, &#39;langage&#39;: &#39;c&#39;, &#39;note&#39;: 20}, {&#39;élève&#39;: &#39;guido&#39;, &#39;langage&#39;: &#39;python&#39;, &#39;note&#39;: 19}, {&#39;élève&#39;: &#39;monty&#39;, &#39;langage&#39;: &#39;python&#39;, &#39;note&#39;: 20}]</span>
+</code></pre></div>
+<p>Si l'on souhaite trier dans l'ordre croissant suivant l'attribut langage et décroissant suivant l'attribut note, on procède en deux étapes :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">cle_langage</span><span class="p">(</span><span class="n">enre</span><span class="p">):</span>
+<span class="go">        return enre[&#39;langage&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">cle_note</span><span class="p">(</span><span class="n">enre</span><span class="p">):</span>
+<span class="go">        return enre[&#39;note&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table_temp</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">cle_langage</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">table_temp</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">cle_note</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go">[{&#39;élève&#39;: &#39;brian&#39;, &#39;langage&#39;: &#39;c&#39;, &#39;note&#39;: 20}, {&#39;élève&#39;: &#39;monty&#39;, &#39;langage&#39;: &#39;python&#39;, &#39;note&#39;: 20}, {&#39;élève&#39;: &#39;guido&#39;, &#39;langage&#39;: &#39;python&#39;, &#39;note&#39;: 19}]</span>
+</code></pre></div>
+<h2 id="4-fusion-de-deux-tables">4. Fusion de deux tables<a class="headerlink" href="#4-fusion-de-deux-tables" title="Permanent link">⚓︎</a></h2>
+<p>Il est courant de travailler avec plusieurs tables de données. Nous avons alors parfois besoin de rassembler deux tables en une seule ou encore de construire une nouvelle table à partir de certains attributs de tables existantes.</p>
+<h3 id="41-fusion-de-deux-tables-de-meme-structure">4.1. Fusion de deux tables de même structure<a class="headerlink" href="#41-fusion-de-deux-tables-de-meme-structure" title="Permanent link">⚓︎</a></h3>
+<p>Le cas le plus simple est lorsque nous disposons de deux tables, par exemple sous la forme de tableaux de dictionnaires, qui possèdent exactement les mêmes attributs.</p>
+<p>Une simple <strong>concaténation</strong> des tableaux permet cette fusion, en prenant garde néanmoins :</p>
+<ul>
+<li>à ne pas conserver deux fois la définition des descripteurs ;</li>
+<li>à éviter les doublons : cas d'un enregistrement qui se trouverait dans les deux tables initiales.</li>
+</ul>
+<p>Sous l'hypothèse qu'il n'y a pas de doublons, le code ci-dessous procède à cette fusion :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fusion_tables</span><span class="p">(</span><span class="n">table1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">table2</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;table 1 et table 2 ont les mêmes descripteurs</span>
+<span class="sd">    il n&#39;y a pas de doublons&quot;&quot;&quot;</span>
+    <span class="n">fusion</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">table1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">enreg</span> <span class="ow">in</span> <span class="n">table2</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>    <span class="c1"># on élimine la première ligne (descripteurs)</span>
+        <span class="n">fusion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">enreg</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">fusion</span>
+</code></pre></div>
+<h3 id="42-fusion-de-deux-tables-pour-un-meme-attribut">4.2. Fusion de deux tables pour un même attribut<a class="headerlink" href="#42-fusion-de-deux-tables-pour-un-meme-attribut" title="Permanent link">⚓︎</a></h3>
+<p>On veut fusionner deux tables selon un attribut commun. On va sélectionner dans chaque table la ligne ayant la même valeur pour l'attribut choisi.</p>
+<p>Reprenons le tableau <code>Table1</code> des exemples précédents :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nom</th>
+<th align="center">Anglais</th>
+<th align="center">Info</th>
+<th align="center">Maths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Joe</td>
+<td align="center">17</td>
+<td align="center">18</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">Zoé</td>
+<td align="center">15</td>
+<td align="center">17</td>
+<td align="center">19</td>
+</tr>
+<tr>
+<td align="center">Max</td>
+<td align="center">19</td>
+<td align="center">13</td>
+<td align="center">14</td>
+</tr>
+</tbody>
+</table>
+<p>Définissons une seconde table, <code>Table2</code> donnant l'âge et le courriel de certains élèves :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nom</th>
+<th align="center">Age</th>
+<th align="center">Courriel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Joe</td>
+<td align="center">16</td>
+<td align="center"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;">&#106;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;</a></td>
+</tr>
+<tr>
+<td align="center">Zoé</td>
+<td align="center">15</td>
+<td align="center"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#122;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;">&#122;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;</a></td>
+</tr>
+</tbody>
+</table>
+<p>On voudrait regrouper les données des deux tables. Elles ont l'attribut <code>Nom</code> en commun. On veut obtenir la table suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nom</th>
+<th align="center">Age</th>
+<th align="center">Courriel</th>
+<th align="center">Anglais</th>
+<th align="center">Info</th>
+<th align="center">Maths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Joe</td>
+<td align="center">16</td>
+<td align="center"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;">&#106;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;</a></td>
+<td align="center">17</td>
+<td align="center">18</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">Zoé</td>
+<td align="center">15</td>
+<td align="center"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#122;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;">&#122;&#111;&#101;&#64;&#105;&#110;&#102;&#111;&#46;&#102;&#114;</a></td>
+<td align="center">15</td>
+<td align="center">17</td>
+<td align="center">19</td>
+</tr>
+</tbody>
+</table>
+<p>On choisit d'exclure la ligne concernant Max car il n'est pas présent dans la seconde table.</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>En informatique, la <strong>jointure</strong> est l'opération permettant d'associer plusieurs tables par le biais d'un lien logique de données entre les différentes tables, le lien étant défini par une condition. Le résultat de l'opération est une nouvelle table.</p>
+</div>
+<p>La jointure s'obtient avec deux boucles imbriquées : on parcourt tous les couples constitués d'enregistrements de la première puis de la seconde table et on filtre à l'aide d'une instruction conditionnelle.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="n">Table1</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Joe&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;18&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;16&#39;</span><span class="p">},</span>
+          <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Zoé&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;19&#39;</span><span class="p">},</span>
+          <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Max&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;19&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;13&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;14&#39;</span><span class="p">},</span>
+          <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">:</span> <span class="s1">&#39;12&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">:</span> <span class="s1">&#39;16&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">}]</span>
+
+<span class="n">Table2</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Joe&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;Couriel&#39;</span><span class="p">:</span> <span class="s1">&#39;joe@info.fr&#39;</span><span class="p">},</span>
+          <span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Zoé&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;Couriel&#39;</span><span class="p">:</span> <span class="s1">&#39;zoe@info.fr&#39;</span><span class="p">}]</span>
+
+
+<span class="k">def</span> <span class="nf">jointure_selon_attribut_commun</span><span class="p">(</span><span class="n">t1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">t2</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">attr</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Effectue la jointure entre les tables t1 et t2 selon l&#39;attribut commun attr&quot;&quot;&quot;</span>
+    <span class="n">jointure</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item1</span> <span class="ow">in</span> <span class="n">t1</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item2</span> <span class="ow">in</span> <span class="n">t2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">item1</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">==</span> <span class="n">item2</span><span class="p">[</span><span class="n">attr</span><span class="p">]:</span>
+                <span class="c1"># définition d&#39;une ligne de la nouvelle table reprenant le contenu de la ligne en cours de t1</span>
+                <span class="n">new_line</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
+                <span class="c1"># boucle pour ajouter les champs de la ligne de t2 autres que attr</span>
+                <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">item2</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">cle</span> <span class="o">!=</span> <span class="n">attr</span><span class="p">:</span>
+                        <span class="n">new_line</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">=</span> <span class="n">item2</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
+                <span class="c1"># ajout de la nouvelle ligne à la nouvelle table</span>
+                <span class="n">jointure</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_line</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jointure</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jointure_selon_attribut_commun</span><span class="p">(</span><span class="n">Table2</span><span class="p">,</span> <span class="n">Table1</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">))</span>
+</code></pre></div>
+<p>On obtient :</p>
+<div class="highlight"><span class="filename">Sortie</span><pre><span></span><code>[{&#39;Nom&#39;: &#39;Joe&#39;, &#39;Age&#39;: 16, &#39;Couriel&#39;: &#39;joe@info.fr&#39;, &#39;Anglais&#39;: &#39;17&#39;, &#39;Info&#39;: &#39;18&#39;, &#39;Maths&#39;: &#39;16&#39;}, {&#39;Nom&#39;: &#39;Zoé&#39;, &#39;Age&#39;: 15, &#39;Couriel&#39;: &#39;zoe@info.fr&#39;, &#39;Anglais&#39;: &#39;15&#39;, &#39;Info&#39;: &#39;17&#39;, &#39;Maths&#39;: &#39;19&#39;}]
+</code></pre></div>
+<p><strong>Remarque</strong> : dans la fonction ci-dessus, on suppose que le nom des attributs est toujours une chaîne de caractères.</p>
+
+
+
+
+
+                
+    <script src="../../../js/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">© Licence CC-BY-NC-SA 4.0 International</a> - <a href="https://flallemand.fr/nsi/mentions/">Mentions légales</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://gitlab.com/sites32/site_nsi" target="_blank" rel="noopener" title="Dépôt GitLab" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://mooc-forums.inria.fr/moocnsi/" target="_blank" rel="noopener" title="Le forum des enseignants de NSI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.instant", "toc.integrate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+        <script src="../../../assets/javascript/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js""></script>
+      
+    
+  </body>
+</html>
