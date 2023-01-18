@@ -1,0 +1,30 @@
+Wikipedia ist ein gemeinschaftliches Projekt mit dem Ziel, eine Enzyklopädie von bestmöglicher Qualität zu schaffen.
+
+Für die Arbeit an der Wikipedia gelten Richtlinien und Empfehlungen, deren Einhaltung von den Teilnehmern als wichtig oder gar notwendig eingestuft wird. Diese Richtlinien entstehen durch Konsens oder Gewohnheit und können sich im Lauf der Zeit verändern. Manche Richtlinien hat der Mitgründer Jimbo Wales für offiziell erklärt, siehe auch diesen Beitrag auf Wikien-l und Jimbo Wales/Statement of principles.
+
+Offene Fragen werden auf Diskussionsseiten, den Mailinglisten und Meta-Wiki erörtert, über Meinungsbilder kann man herausfinden, welche Lösungen am meisten Zuspruch finden. Das, was allgemein akzeptiert wird, erhält dann nach und nach den Status einer festen Konvention, über die meist auch nicht weiter diskutiert wird.
+
+Zentrale Grundprinzipien der Wikipedia
+
+Die folgenden vier Punkte sind die zentralen und im Kern unveränderlichen Grundsätze der deutschsprachigen Wikipedia.
+
+Wikipedia ist eine Enzyklopädie: Die Wikipedia dient dazu, eine Enzyklopädie aufzubauen, siehe dazu Was ist ein Artikel. Zu Inhalten, die es in der Wikipedia nicht geben sollte, siehe Was Wikipedia nicht ist.
+Neutralität: Mittels eines neutralen Standpunktes versucht man, eine Thematik so zu präsentieren, dass sowohl deren Gegner als auch deren Befürworter die Darstellung tolerieren können. Er erfordert nicht die Akzeptanz aller; dies wird man selten erreichen, zumal manche Ideologien alle anderen Standpunkte außer ihren eigenen ablehnen. Daher sollte das Ziel darin bestehen, eine für alle rational denkenden Beteiligten tolerable Beschreibung zu formulieren.
+Freie Inhalte: Wikipedia ist eine freie Enzyklopädie, die Inhalte müssen unter einer freien Lizenz stehen. Der Text steht unter der Creative-Commons-Lizenz Attribution-ShareAlike 3.0 Unported, die eine auch kommerzielle Weiternutzung und Bearbeitung unter der Bedingung der Autorennennung und der weiteren Verbreitung unter gleichen Bedingungen (Copyleft) erlaubt. Die Bilder haben verschiedene Lizenzen. Die Veröffentlichung von Texten oder Bildern ohne die Erlaubnis des Rechteinhabers kann zu ernsthaften Problemen für das Projekt führen.
+Keine persönlichen Angriffe: Die Teilnehmer der Wikipedia kommen aus unterschiedlichen Regionen, Ländern und Kulturen und haben oft sehr unterschiedliche Ansichten und alle eine verletzliche Seite. Siehe auch: Wikiquette, Wikiliebe, Geh von guten Absichten aus und Sei nett zu Anfängern.
+
+Wer sorgt für die Einhaltung dieser Richtlinien?
+
+Du bist ein Wikipedia-Autor, es gibt keinen Chefredakteur oder eine vergleichbare Instanz. Aktive Mitglieder schauen sich die letzten Änderungen an und korrigieren Inhalt und Format. Jeder Teilnehmer ist gleichzeitig Autor und Redakteur.
+
+Wenn du in einem konkreten Fall Meinungsverschiedenheiten mit anderen Benutzern zur Auslegung oder Anwendung der Richtlinien hast, solltest du diese auf der Diskussionsseite des jeweiligen Artikels klären und nicht durch ständiges Rückgängigmachen von Änderungen einen Edit-War beginnen.
+
+Wenn sich mehrere Benutzer nicht einigen können und es zu einem Edit-War kommt, können Administratoren betroffene Artikel vorübergehend gegen weitere Änderungen sperren.
+
+In extremen Fällen können die Administratoren auch Benutzer sperren, siehe auch Wikipedia:Benutzersperrung.
+
+Eingriffsrecht der Wikimedia Foundation
+
+Unabhängig von den projektinternen Richtlinien hat die Wikimedia Foundation als Betreiberin und rechtlich Verantwortliche dieser Website das Recht einzugreifen, um z. B. Rechtsverletzungen zu beseitigen.
+
+Derartige Handlungen müssen klar als offizieller Eingriff kommuniziert werden und dürfen nicht rückgängig gemacht werden. Stattdessen sollte für Rückfragen die Wikimedia Foundation angesprochen werden. 

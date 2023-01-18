@@ -1,0 +1,376 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{etex} %évite les erreurs no room for ....
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb} %gestion des symboles mathmatiques
+\usepackage{amsfonts} %gestion des polices mathmatiques
+\usepackage{fancybox} %gestion des encadrements
+\usepackage{lastpage} %gestion du nombre total de pages du document
+\usepackage{geometry} %gestion des marges du document
+\usepackage{fancyhdr} %gestion des entetes et des pieds de page
+\usepackage{epsfig}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pdftricks}
+\usepackage{eurosym}
+\usepackage{pifont}
+\usepackage{eucal}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\usepackage{diagbox}
+\usepackage{lscape}
+\usepackage{ifpdf}
+\usepackage[tikz]{bclogo}
+\usepackage{amsthm}
+\usepackage{tabvar}
+\usepackage{multicol}
+\usepackage{frcursive}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{eurosym}
+\usepackage{cancel}
+\usepackage{longtable,booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\usepackage{varwidth}
+\usepackage{MnSymbol} % contient le caractère \nsubset
+\usepackage{wrapfig}
+\usepackage{wasysym} % pour certains symboles
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage[np]{numprint}
+\usepackage{fontawesome5}
+\usepackage{xspace}
+
+\titleformat{\section}
+{\Large\bfseries}{\thesection}{1em}{}[\titlerule]
+% {\Large\bfseries}{\thesection}{1em}{\MakeUppercase}[\titlerule]
+
+\titleformat{\subsection}
+{\large\bfseries}{\thesubsection}{1em}{}[\titlerule]
+% {\large\bfseries}{\thesubsection}{1em}{\MakeUppercase}[\titlerule]
+
+%% Macro pour limite  gauche%%
+\newcommand{\limgauche}[2]{\lim_{#1\rightarrow #2\hspace{-1.5em}\raisebox{-1.2ex}{\scriptsize $#1<#2$}}}
+
+%% Macro pour limite  droite%%
+\newcommand{\limdroite}[2]{\lim_{#1\rightarrow #2\hspace{-1.5em}\raisebox{-1.2ex}{\scriptsize $#1>#2$}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lm}[2]{\displaystyle{\lim_{#1 \rightarrow #2}}}
+\newcommand{\e}[1]{\text{e}^{#1}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\newcommand{\vect}[1]{\mathchoice%
+{\overrightarrow{\displaystyle\mathstrut#1\,\,}}%
+{\overrightarrow{\textstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptscriptstyle\mathstrut#1\,\,}}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~ \vect{\jmath},~ \vect{k}\right)$}
+\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
+\newcommand{\V}{\overrightarrow}
+\newcommand{\Coor}{\binom}
+\newcommand{\Rep}{\left(O;\V{i},\V{j}\right)}
+\renewcommand{\emph}{\textit}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\Syst}[2]{\left\{
+    \begin{array}{ccccc}
+        #1   
+        #2
+    \end{array}\right.
+}
+
+%%%%%%%%%%%%%%%%%% MES ENVIRONNEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{definition}[1]{\begin{tcolorbox}[title= {\color{NavyBlue} \faPencil*}~~\textbf{Définition #1}, colframe=NavyBlue, colback=white, colbacktitle=NavyBlue!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{info}[1]{\begin{tcolorbox}[title= {\color{ProcessBlue} \faBook}~~\textbf{#1}, colframe=ProcessBlue, colback=white, colbacktitle=ProcessBlue!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{remarque}[1]{\begin{tcolorbox}[title= {\color{SkyBlue} \faInfo}~~\textbf{Remarque #1}, colframe=SkyBlue, colback=white, colbacktitle=SkyBlue!20!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{indication}[1]{\begin{tcolorbox}[title= {\color{Turquoise} \faHotjar}~~\textbf{Indication #1}, colframe=Turquoise, colback=white, colbacktitle=Turquoise!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{solution}[1]{\begin{tcolorbox}[title= {\color{ForestGreen} \faCheck}~~\textbf{Solution #1}, colframe=ForestGreen, colback=white, colbacktitle=ForestGreen!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{exercice}[1]{\begin{tcolorbox}[title= {\color{YellowGreen} \faQuestion}~~\textbf{Exercice #1}, colframe=YellowGreen, colback=white, colbacktitle=YellowGreen!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{attention}[1]{\begin{tcolorbox}[title= {\color{Dandelion} \faExclamationTriangle}~~\textbf{Attention #1}, colframe=Dandelion, colback=white, colbacktitle=Dandelion!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{avertissement}[1]{\begin{tcolorbox}[title= {\color{RedOrange} \faSkullCrossbones}~~\textbf{#1}, colframe=RedOrange, colback=white, colbacktitle=RedOrange!15!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{theoreme}[1]{\begin{tcolorbox}[title= {\color{red} \faBolt}~~\textbf{Thèorème #1}, colframe=red, colback=white, colbacktitle=red!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{exemple}[1]{\begin{tcolorbox}[title= {\color{Periwinkle} \faFlask}~~\textbf{Exemple #1}, colframe=Periwinkle, colback=white, colbacktitle=Periwinkle!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\newenvironment{citations}[1]{\begin{tcolorbox}[title= {\color{Gray} \faQuoteRight}~~\textbf{Citation #1}, colframe=Gray, colback=white, colbacktitle=Gray!10!white, coltitle=black, boxrule=0.1mm, titlerule=0mm]}{\end{tcolorbox}}
+
+\geometry{ tmargin=2cm,bmargin=2cm, hmargin=1.5cm }
+
+\everymath{\displaystyle}
+
+\setlength{\parindent}{0cm}
+
+\pagestyle{fancy}
+
+\begin{document}
+    
+    
+    \lhead{Première NSI} \rhead{2022/2023}
+    \chead{} 
+    \cfoot{}
+    \lfoot{Lycée \'Emile Duclaux}
+    \rfoot{Page \thepage/\pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+
+\Huge S2 - Ch. 4 : Booléens
+
+\vspace{.25cm}
+\normalsize Cours
+
+\vspace{.25cm}
+\hrule
+
+\vspace{.5cm}
+
+
+Nous avons déjà rencontré les booléens dans la première séquence.
+
+En programmation informatique, un booléen est un type de variable à deux
+états (généralement notés vrai et faux), destiné à représenter les
+valeurs de vérité de la logique et l'algèbre booléenne. Il est nommé
+ainsi d'après George Boole (1815-1864), fondateur dans le milieu du XIXe
+siècle de l'algèbre portant son nom.
+
+Nous avons vu qu'en Python, les deux valeurs booléennes sont notées
+\texttt{True} et \texttt{False}.
+
+De manière équivalents, on adopte souvent une notation numérique en
+associant 1 à \texttt{True} et 0 à \texttt{False}.
+
+\hypertarget{opuxe9rateurs-booluxe9ens-de-base}{%
+\subsection*{1. Opérateurs booléens de
+base}\label{opuxe9rateurs-booluxe9ens-de-base}}
+
+Dans le cours sur les bases de Python, nous avons déjà vu les opérateurs
+\texttt{or}, \texttt{and} et \texttt{not}.
+
+\hypertarget{opuxe9rateur-ou}{%
+\subsubsection*{Opérateur OU}\label{opuxe9rateur-ou}}
+
+\begin{definition}{}
+
+Soit \(a\) et \(b\) deux expressions :
+
+
+$$a\textrm{ OU }b\textrm{ est vrai }\iff a\textrm{ est vrai ou }b\textrm{ est vrai}$$
+\end{definition}
+
+Table de vérité de l'opérateur OU :
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\(a\) & \(b\) & \(a\) OU \(b\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1\tabularnewline
+1 & 0 & 1\tabularnewline
+0 & 1 & 1\tabularnewline
+0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{remarque}{}
+En logique l'opérateur OU est \textbf{inclusif}
+: cela signifie que \(a\) OU \(b\) est vrai aussi lorsque \(a\) est vrai
+et \(b\) est vrai. Dans la langue courant, le mot \emph{ou} est le plus
+souvent \textbf{exclusif} : dans un menu, par exemple ``fromage ou
+dessert'' ne permet pas de prendre les deux.
+
+\end{remarque}
+
+\hypertarget{opuxe9rateur-et}{%
+\subsubsection*{Opérateur ET}\label{opuxe9rateur-et}}
+
+\begin{definition}{}
+    Soit \(a\) et \(b\) deux expressions :
+
+ 
+$$a\textrm{ ET }b\textrm{ est vrai }\iff a\textrm{ est vrai et }b\textrm{ est vrai}$$
+ 
+\end{definition}
+
+
+Table de vérité de l'opérateur ET :
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\(a\) & \(b\) & \(a\) ET \(b\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 1\tabularnewline
+1 & 0 & 0\tabularnewline
+0 & 1 & 0\tabularnewline
+0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{opuxe9rateur-non}{%
+\subsubsection*{Opérateur NON}\label{opuxe9rateur-non}}
+
+
+\begin{definition}{} 
+    Soit \(a\) une expression :
+
+ 
+$$(\textrm{NON }a)\textrm{ est vrai }\iff a\textrm{ est faux}$$
+\end{definition}
+
+Table de vérité de l'opérateur NON :
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+\(a\) & NON \(a\)\tabularnewline
+\midrule
+\endhead
+1 & 0\tabularnewline
+0 & 1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{expressions-booluxe9ennes}{%
+\subsection*{2. Expressions booléennes}\label{expressions-booluxe9ennes}}
+
+Les opérateurs de base peuvent être combinés pour formuler des
+expressions booléennes plus complexes. Pour éviter des problèmes
+d'interprétation, il est préférable d'utiliser des parenthèses pour
+marquer les priorités.
+
+\begin{exercice}{}
+ 
+Recopier et compléter la table de vérité ci-dessous :
+
+\begin{longtable}[]{@{}ccccccc@{}}
+    \toprule
+    \(a\) & \(b\) & NON \(a\) & NON \(b\) & (NON \(a\)) ET (NON \(b\)) &
+    NON((NON \(a\)) ET (NON \(b\))) & \(a\) OU \(b\)\tabularnewline
+    \midrule
+    \endhead
+    1 & 1 & & & & &\tabularnewline
+    1 & 0 & & & & &\tabularnewline
+    0 & 1 & & & & &\tabularnewline
+    0 & 0 & & & & &\tabularnewline
+    \bottomrule
+    \end{longtable}
+
+Que peut-on constater ?
+\end{exercice}
+
+\hypertarget{le-ou-exclusif}{%
+\subsection*{3. Le ou exclusif}\label{le-ou-exclusif}}
+
+Le OU logique étant inclusif, on définit un opérateur spécifique pour le
+ou exclusif, appelé opérateur XOR.
+
+\begin{definition}{} Soit \(a\) et \(b\) deux expressions :
+
+ 
+$$a\textrm{ XOR }b\textrm{ est vrai }\iff (a\textrm{ est vrai et }b\textrm{ est faux})\textrm{ ou }(a\textrm{ est faux et }b\textrm{ est vrai})$$
+\end{definition}
+
+Table de vérité de l'opérateur XOR :
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\(a\) & \(b\) & \(a\) XOR \(b\)\tabularnewline
+\midrule
+\endhead
+1 & 1 & 0\tabularnewline
+1 & 0 & 1\tabularnewline
+0 & 1 & 1\tabularnewline
+0 & 0 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+En Python, l'opérateur \texttt{xor} n'existe pas. Le ou exclusif est
+noté \texttt{\^{}}.
+
+\begin{minted}{pycon} 
+>>> True ^ False
+True
+\end{minted}
+ 
+
+\hypertarget{laddition-binaire-en-mode-booluxe9en}{%
+\subsection*{4. L'addition binaire en mode
+booléen}\label{laddition-binaire-en-mode-booluxe9en}}
+
+Lorsque nous posons l'addition de deux entiers écrits en base 2, nous
+avons besoin d'additionner des groupes de 3 bits (un pour chaque nombre
+et un pour la retenue).
+
+Voyons ce que donne l'addition de trois bits :
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+\(a\) & \(b\) & \(c\) & \(a+b+c\)\tabularnewline
+\midrule
+\endhead
+0 & 0 & 0 & 0\tabularnewline
+1 & 0 & 0 & 1\tabularnewline
+0 & 1 & 0 & 1\tabularnewline
+0 & 0 & 1 & 1\tabularnewline
+1 & 1 & 0 & 10\tabularnewline
+1 & 0 & 1 & 10\tabularnewline
+0 & 1 & 1 & 10\tabularnewline
+1 & 1 & 1 & 11\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{exercice}{}
+En assimilant 0 à \texttt{False} et 1 à
+\texttt{True} écrire une fonction \texttt{add\_trois\_bits(a,\ b,\ c)}
+qui retourne la somme \(a+b+c\) en utilisant uniquement les opérateurs
+ET, OU et NON. On retournera la somme sous la forme d'une chaîne de deux
+caractères (\texttt{"01"} par exemple).
+
+\begin{minted}{python}
+def add_3_bits(a, b, c) :
+    unite = int(...)
+    deuzaine = int(...)
+    return str(deuzaine)+str(unite)
+
+assert add_3_bits(0,0,0)=="00"
+assert add_3_bits(1,0,0)=="01"
+assert add_3_bits(0,1,0)=="01"
+assert add_3_bits(0,0,1)=="01"
+assert add_3_bits(1,1,0)=="10"
+assert add_3_bits(1,0,1)=="10"
+assert add_3_bits(0,1,1)=="10"
+assert add_3_bits(1,1,1)=="11"
+print("C'est parfait !")
+\end{minted}
+ 
+\end{exercice}
+
+\end{document}
