@@ -56,3 +56,7 @@ On vérifiera d’abord que la note passée en paramètre est comprise entre 0 e
 Proposer un jeu de tests unitaires pour cette fonction.
 
 -------------------------
+
+## Corrigés
+
+[Voir le corrigé](https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/assets/notebooks/specif_tests_exos_CORR.ipynb){target=_blank .md-button .md-button--primary}

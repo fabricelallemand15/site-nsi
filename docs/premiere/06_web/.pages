@@ -1,3 +1,16 @@
-title: 06-Interactions Homme-Machine sur le web
+title: S5-Interactions Homme-Machine sur le web
 nav:
     - index.md
+    - acti1_HTML.md
+    - cours_HTML.md
+    - ref_HTML.md
+    - acti2_CSS.md
+    - cours_CSS.md
+    - acti3_Javascript.md
+    - cours_JS.md
+    - cours_HTTP.md
+    - Exos_HTTP.md
+    - acti4_forms.md
+    - cours_forms.md
+    - exos_forms.md
+    - TP_forms.md

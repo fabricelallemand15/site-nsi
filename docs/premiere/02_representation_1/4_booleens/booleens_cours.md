@@ -98,7 +98,7 @@ Table de vérité de l'opérateur XOR :
 | 0  | 1 | 1 |
 | 0  | 0 | 0 |
 
-En Python, l'opérateur `xor` n'existe pas. Le ou exclusif est note ``^``.
+En Python, l'opérateur `xor` n'existe pas. Le ou exclusif est noté ``^``.
 
 ````pycon
 >>> True ^ False

@@ -1,3 +1,6 @@
-title: 06-Algorithmique (2)
+title: S6-Algorithmique
 nav:
     - index.md
+    - rappels.md
+    - algos_arbres
+    - diviser_pour_regner

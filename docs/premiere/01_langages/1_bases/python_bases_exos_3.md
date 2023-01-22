@@ -97,7 +97,7 @@ while i<1000000 :
 
 ### :fontawesome-solid-computer: Exercice 5
 
-Écrire un programme qui simule le lancer de trois et qui recommence jusqu’à ce qu’on obtienne un triple 6, et qui affiche le nombre d’essais qui ont été nécessaires pour obtenir ce résultat, de la manière présentée ci-dessous :
+Écrire un programme qui simule le lancer de trois dés et qui recommence jusqu’à ce qu’on obtienne un triple 6, et qui affiche le nombre d’essais qui ont été nécessaires pour obtenir ce résultat, de la manière présentée ci-dessous :
 
 ````pycon
 >>> 

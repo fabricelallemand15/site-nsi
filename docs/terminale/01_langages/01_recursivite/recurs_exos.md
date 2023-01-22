@@ -273,5 +273,3 @@ exitonclick()
 ## :octicons-pencil-16: Exercice 7 (type bac)
 
 <iframe src="../../../../assets/pdf/exo_type_bac_recursivite_1.pdf" width="100%" height="500px"> </iframe>
-
-[Lien vers le corrigé](../../../corrections/exo_type_bac_recursivite_1_corr.md)

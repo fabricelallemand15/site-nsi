@@ -1,5 +1,7 @@
 # 2. Le langage SQL
 
+[Version Notebook de ce cours](https://flallemand.fr/notebook/?kernel=sql&extensions=admonitions&module=https://flallemand.fr/nsi/assets/BDD/Cantal.db&from=https://flallemand.fr/nsi/assets/notebooks/cours_SQL.ipynb){ .md-button .md-button--primary target=_blank }
+
 Nous avons étudié la structure d'une base de données relationnelle, nous allons maintenant apprendre à réaliser des **requêtes**, c'est-à-dire que nous allons apprendre à créer une base des données, créer des attributs, ajouter des données, modifier des données et enfin, nous allons surtout apprendre à interroger une base de données afin d'obtenir des informations.
 
 Pour réaliser toutes ces requêtes, nous allons devoir apprendre un langage de requêtes : SQL (Structured Query Language). SQL est propre aux bases de données relationnelles.

@@ -88,3 +88,19 @@ Le CNAM (Conservatoire National des Arts et Métiers) propose en ligne des trava
 
 [![](../../assets/images/CNAM_SQL.png)](https://deptfod.cnam.fr/bd/tp/){ target=_blank }
 
+--------------------------------------------------------
+
+## :fontawesome-solid-computer: Problème
+
+Serious game : meurtre à SQL City ...
+
+[![image](../../assets/images/sql_city.png)](https://mystery.knightlab.com/){ target=_blank }
+
+--------------------------------------------------
+
+## :fontawesome-solid-computer: Pour les plus rapides
+
+Serious game : SQL Island ...
+
+[![image](../../assets/images/sql_island.png)](https://sql-island.informatik.uni-kl.de/){ target=_blank }
+

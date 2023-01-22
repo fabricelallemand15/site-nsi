@@ -1,5 +1,5 @@
 ---
-title: S7-Ch. 1 Routage - Exercices
+title: Routage - Exercices
 niveau: Terminale
 année: 2022/2023
 ---

@@ -27,7 +27,7 @@ Voici quelques exemples de situations dans lesquelles une structure de données 
 
 #### L'arborescence d'un disque dur
 
-Déjà rencontrée dans le chapitre les systèmes d'exploitation en première, une arborescence de dossiers dans un disque dur peut être modélisée par un arbre.
+Déjà rencontrée dans le chapitre sur les systèmes d'exploitation en première, une arborescence de dossiers dans un disque dur peut être modélisée par un arbre.
 
 ![](../../assets/images/arborescence.svg)
 

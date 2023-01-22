@@ -16,64 +16,67 @@ De plus, il serait souhaitable de parvenir à afficher un arbre de façon visuel
 
 Nous avons vu que la structure d'arbre binaire est une structure **récursive** : cette propriété est exploitée dans l'implémentation que nous allons présenter. Pour définir un arbre, il suffit de définir un nœud racine ainsi que les deux sous-arbres gauche et droite qui sont eux-même des arbres binaires. Cela revient à assimiler un arbre à sa racine associée à un lien vers ses deux fils.
 
-Nous définissons ci-dessous un objet `ArbreBinaire` possédant trois attributs `clef`, `gauche`, `droit`. Le code ci-dessous respecte les règles de l'encapsulation du paradigme objet à la sauce Python : les attributs sont privés. La méthode `@clef.setter`, qui permet de définir la clef d'un nœud assure que chaque nœud a toujours un sous-arbre gauche **et** un sous-arbre droit, éventuellement vides, ce qui facilite le traitement des arbres dans les algorithmes suivants. On matérialise ici l'aspect récursif de la structure.
+Nous définissons ci-dessous un objet `ArbreBinaire` possédant trois attributs `clef`, `gauche`, `droit`. Pour respecter les principes de la POO, et notamment la notion d'**encapsulation**, nous avons défini des méthodes d'accès aux attributs (elles commencent par `get`) et des méthodes de modification des attributs (elles commencent par `set`) et on s'interdira tout accès ou affectation direct(e) du type `arbre.racine = ...`.
+
+La méthode `setRacine`, qui permet de définir la clef d'un nœud assure que chaque nœud a toujours un sous-arbre gauche **et** un sous-arbre droit, éventuellement vides, ce qui facilite le traitement des arbres dans les algorithmes suivants. On matérialise ici l'aspect récursif de la structure.
 
 ````Python
 class ArbreBinaire:
     """ Implémentation de la structure d'arbre binaire """
 
     def __init__(self):
-        self.__clef = None
-        self.__gauche = None
-        self.__droit = None
+        self.racine = None
+        # les sous-arbres gauche et droit doivent être des instances de l'objet ArbreBinaire
+        self.gauche = None
+        self.droit = None
 
-    @property
-    def clef(self):
-        return self.__clef
+    def setRacine(self, racine):
+        """définit la clef de la racine de l'instance
+         et crée les sous arbres vides gauches et droits"""
+        self.racine = racine
+        if self.gauche is None:
+            self.gauche = ArbreBinaire()
+        if self.droit is None:
+            self.droit = ArbreBinaire()
+    
+    def getRacine(self):
+        """retourne la clef de la racine de l'arbre"""
+        return self.racine
 
-    @clef.setter
-    def clef(self, clef):
-        self.__clef = clef
-        if self.__gauche is None:
-            self.__gauche = ArbreBinaire()
-        if self.__droit is None:
-            self.__droit = ArbreBinaire()
+    def getSousArbreGauche(self):
+        return self.gauche
 
-    @property
-    def gauche(self):
-        return self.__gauche
+    def setSousArbreGauche(self, arbre):
+        if isinstance(arbre, ArbreBinaire):
+            self.gauche = arbre
 
-    @gauche.setter
-    def gauche(self, clef):
-        self.__gauche.clef = clef
+    def getSousArbreDroit(self):
+        return self.droit
 
-    @property
-    def droit(self):
-        return self.__droit
+    def setSousArbreDroit(self, arbre):
+        if isinstance(arbre, ArbreBinaire):
+            self.droit = arbre
 
-    @droit.setter
-    def droit(self, clef):
-        self.__droit.clef = clef
+    def estVide(self) -> bool:
+        return self.racine is None
 
-    def est_vide(self) -> bool:
-        return self.__clef is None
-
-    def est_feuille(self) -> bool:
-        if self.est_vide():
+    def estFeuille(self) -> bool:
+        if self.estVide():
             return False
         else:
-            return self.__gauche.est_vide() and self.__droit.est_vide()
+            return self.gauche.estVide() and self.droit.estVide()
 
     def __str__(self):
-        if self.est_vide():
+        if self.estVide():
             return "()"
-        elif self.est_feuille():
-            return f"({self.__clef}, (), ())"
+        elif self.estFeuille():
+            return f"('{self.racine}', (), ())"
         else:
-            return f"({self.__clef}, {self.__gauche.__str__()}, {self.__droit.__str__()})"
+            return f"('{self.racine}', {self.gauche.__str__()}, {self.droit.__str__()})"
+
 ````
 
-La classe est complétée par une méthode `est_vide` permettant de tester si un arbre est vide ou non et une méthode `est_feuille` permettant de tester si un nœud est une feuille ou non (on confond un nœud avec un arbre de hauteur 1).
+La classe est complétée par une méthode `estVide` permettant de tester si un arbre est vide ou non et une méthode `estFeuille` permettant de tester si un nœud est une feuille ou non (on confond un nœud avec un arbre de hauteur 1).
 
 La dernière méthode est la méthode spéciale `__str__` qui définit la façon dont un arbre va être affiché par la fonction `print`. Ici, on a choisi un affichage sous forme de tuple du type `(clef, sous-arbre gauche, sous-arbre droit)`.
 
@@ -85,14 +88,14 @@ On peut ensuite utiliser notre nouvelle structure dans un autre fichier Python (
 from structures import *
 
 a = ArbreBinaire()
-a.clef = 8
-a.gauche = 3
-a.droit = 9
-b = a.gauche
-c = a.droit
-b.gauche = 7
-b.droit = 5
-c.droit = 1
+a.setRacine(8)
+a.getSousArbreGauche().setRacine(3)
+a.getSousArbreDroit().setRacine(9)
+b = a.getSousArbreGauche()
+c = a.getSousArbreDroit()
+b.getSousArbreGauche().setRacine(7)
+b.getSousArbreDroit().setRacine(5)
+c.getSousArbreDroit().setRacine(1)
 print(a)
 ````
 
@@ -111,11 +114,11 @@ On peut tester les autres méthodes dans la console :
 ````pycon
 print(c)
 >>> (9, (), (1, (), ()))
-c.gauche.est_vide()
+c.getSousArbreGauche().estVide()
 >>> True
-c.est_feuille()
+c.estFeuille()
 >>> False
-c.droit.est_feuille()
+c.getSousArbreDroit().estFeuille()
 >>> True
 ````
 
@@ -124,15 +127,14 @@ Nous pouvons maintenant ajouter au fichier `structures.py` les deux fonctions su
 ````Python
 def taille(arbre) -> int:
     """Retourne la taille de l'arbre, càd son nombre de noeuds"""
-    if arbre.clef is None:
+    if arbre.racine is None:
         return 0
     else:
         return 1 + taille(arbre.gauche) + taille(arbre.droit)
 
-
 def hauteur(arbre) -> int:
     """Retourne la hauteur de l'arbre"""
-    if arbre.clef is None:
+    if arbre.racine is None:
         return 0
     else:
         return 1 + max(hauteur(arbre.gauche), hauteur(arbre.droit))
@@ -151,84 +153,50 @@ Ce module `structures` sera utilisé en exercices et plus tard dans l'année lor
 
 ## 2. Arbres binaires de recherche (ABR)
 
-Les ABR sont des arbres binaires. Nous pouvons donc créer une classe `ABR` semblable à la classe `ArbreBinaire` identique à la classe `ArbreBinaire` déjà créée. Nous définissons néanmoins une nouvelle classe car nous allons ajouter une méthode spécifique : l'insertion d'une clef. Cette méthode ajoute une clef à un ABR existant en s'assurant que l'arbre obtenu est toujours un ABR (le nouveau nœud est toujours une feuille).
+Les ABR sont des arbres binaires. Nous pouvons donc créer une classe `ABR` fille de la classe `ArbreBinaire` en utilisant la notion d'**héritage** et de **polymorphisme** de la POO (voir les compléments de cours à ce sujet). Nous définissons une méthode spécifique : l'insertion d'une clef. Cette méthode ajoute une clef à un ABR existant en s'assurant que l'arbre obtenu est toujours un ABR (le nouveau nœud est toujours une feuille).
 
 ````Python
-class ABR:
+class ABR(ArbreBinaire):
     """ Implémentation de la structure d'arbre binaire de recherche """
 
     def __init__(self):
-        self.__clef = None
-        self.__gauche = None
-        self.__droit = None
+        super().__init__()
 
-    @property
-    def clef(self):
-        return self.__clef
+    def setRacine(self, racine):
+        """définit la clef de la racine de l'instance
+         et crée les sous arbres vides gauches et droits
+         Provoque une erreur si la racine casse la structure d'ABR"""
+        self.racine = racine
+        if self.gauche is None:
+            self.gauche = ABR()
+        if self.droit is None:
+            self.droit = ABR()
+        if not estABR(self):
+            raise Exception("Cette affectation de clef casse la structure ABR !!!")
 
-    @clef.setter
-    def clef(self, clef):
-        self.__clef = clef
-        if self.__gauche is None:
-            self.__gauche = ABR()
-        if self.__droit is None:
-            self.__droit = ABR()
-
-    @property
-    def gauche(self):
-        return self.__gauche
-
-    @gauche.setter
-    def gauche(self, clef):
-        self.__gauche.clef = clef
-
-    @property
-    def droit(self):
-        return self.__droit
-
-    @droit.setter
-    def droit(self, clef):
-        self.__droit.clef = clef
-
-    def est_vide(self) -> bool:
-        return self.__clef is None
-
-    def est_feuille(self) -> bool:
-        if self.est_vide():
-            return False
+    def insere(self, racine):
+        """insère une clef dans l'arbre en préservant la structure ABR"""
+        if self.racine is None:
+            self.racine = racine
+            self.gauche = ABR()
+            self.droit = ABR()
         else:
-            return self.__gauche.est_vide() and self.__droit.est_vide()
-
-    def __str__(self):
-        if self.est_vide():
-            return "()"
-        elif self.est_feuille():
-            return f"({self.__clef}, (), ())"
-        else:
-            return f"({self.__clef}, {self.__gauche.__str__()}, {self.__droit.__str__()})"
-
-    def insere(self, clef):
-        if self.clef is None:
-            self.clef = clef
-        else:
-            if clef < self.clef:
-                self.gauche.insere(clef)
+            if racine < self.racine:
+                self.gauche.insere(racine)
             else:
-                self.droit.insere(clef)
+                self.droit.insere(racine)
 ````
 
 Pour définir un arbre binaire de recherche valide, on utilisera toujours la méthode `insere` car elle permet de s'assurer de toujours conserver un ABR.
 
-En l'état actuel de la classe, il est malheureusement possible de procéder à une affectation directe de clef du type `a.gauche.droit = 5` qui pourrait éventuellement casser la structure d'ABR. On s'interdira donc ce type d'affectation directe (sauf éventuellement pour le nœud racine).
-
-Pour faciliter la vérification, nous définissons une fonction `est_ABR` qui peut s'appliquer aussi bien à un arbre binaire quelconque qu'à un ABR et qui retourne `True` si l'arbre est un ABR et `False` sinon.
+Pour faciliter la vérification, nous définissons une fonction `estABR` qui peut s'appliquer aussi bien à un arbre binaire quelconque qu'à un ABR et qui retourne `True` si l'arbre est un ABR et `False` sinon.
 
 ````Python
-def est_ABR(arbre, mini=-float("inf"), maxi=+float("inf")) -> bool:
-    if arbre.clef is None:
+def estABR(arbre, mini=-float("inf"), maxi=+float("inf")) -> bool:
+    if arbre.getRacine() is None:
         return True
     else:
-        return est_ABR(arbre.gauche, mini, arbre.clef) and est_ABR(arbre.droit, arbre.clef, maxi) and mini < arbre.clef < maxi
+        return estABR(arbre.getSousArbreGauche(), mini, arbre.getRacine()) and estABR(arbre.getSousArbreDroit(), arbre.getRacine(), maxi) and mini < arbre.racine < maxi
 ````
 
 Prendre le temps de bien comprendre cette fonction ...
@@ -239,18 +207,16 @@ Utilisation :
 from structures import *
 
 a = ABR()
-a.clef = 8
+a.setRacine(8)
 a.insere(5)
 a.insere(3)
 a.insere(12)
 a.insere(10)
 a.insere(15)
 print(a)
-print(est_ABR(a))
+print(estABR(a))
 # Affectation directe à proscrire :
-a.droit = 1
-print(a)
-print(est_ABR(a))
+# a.getSousArbreDroit().setRacine(1) ## provoque une erreur
 ````
 
 Sortie :
@@ -258,43 +224,85 @@ Sortie :
 ````pycon
 (8, (5, (3, (), ()), ()), (12, (10, (), ()), (15, (), ())))
 True
-(8, (5, (3, (), ()), ()), (1, (10, (), ()), (15, (), ())))
-False
 ````
 
-Le premier arbre correspond à : 
+L'arbre correspond à : 
 
 ![](../../assets/images/arbre.gv.png)
-
-Le second à :
-
-![](../../assets/images/arbre2.gv.png)
 
 
 Le module `structure.py` est à conserver : il sera utilisé en exercices et dans les chapitres suivants.
 
 !!! abstract "Complément"
-    On peut ajouter une fonctionnalité de représentation graphique d'un arbre en utilisant la bibliothèque `graphviz`. Celle-ci doit cependant être installée séparément et la procédure doit se faire en deux étapes si vous êtes sous Windows : installation du module python (`pip install graphviz`) puis installation des exécutables en [téléchargeant l'installeur](https://gitlab.com/graphviz/graphviz/-/package_files/6164164/download){ target=_blank }. Une fois cela fait, ajouter la fonction ci-dessous au fichier `structures.py` :
+    On peut ajouter une fonctionnalité de représentation graphique d'un arbre en utilisant les bibliothèques `networkx` et `matplotlib`. Ajouter la fonction ci-dessous au fichier `structures.py` :
 
     ````python
-    def affiche_arbre(arbre):
-        def construit_figure(arb, figure):
-            if arb.clef is None:
-                return
-            else:
-                figure.node(str(arb.clef), str(arb.clef))
-                if arb.gauche.clef is not None:
-                    figure.node(str(arb.gauche.clef), str(arb.gauche.clef))
-                    figure.edge(str(arb.clef), str(arb.gauche.clef))
-                    construit_figure(arb.gauche, figure)
-                if arb.droit.clef is not None:
-                    figure.node(str(arb.droit.clef), str(arb.droit.clef))
-                    figure.edge(str(arb.clef), str(arb.droit.clef))
-                    construit_figure(arb.droit, figure)
+    import networkx as nx
+    import matplotlib.pyplot as plt
 
-        fig = graphviz.Graph('arbre', format='png')
-        construit_figure(arbre, fig)
-        fig.render(directory="essai", view=True)
+    def afficheArbre(arbre, size=(4,4), null_node=False):
+    """
+    size : tuple de 2 entiers. Si size est int -> (size, size)
+    null_node : si True, trace les liaisons vers les sous-arbres vides
+    """
+    arbreAsTuple = eval(arbre.__str__())
+    def parkour(arbre, noeuds, branches, labels, positions, profondeur, pos_courante, pos_parent, null_node):
+        if arbre != ():
+            noeuds[0].append(pos_courante)
+            positions[pos_courante] = (pos_courante, profondeur)
+            profondeur -= 1
+            labels[pos_courante] = str(arbre[0])
+            branches[0].append((pos_courante, pos_parent))
+            pos_gauche = pos_courante - 2 ** profondeur
+            parkour(arbre[1], noeuds, branches, labels, positions, profondeur, pos_gauche, pos_courante, null_node)
+            pos_droit = pos_courante + 2 ** profondeur
+            parkour(arbre[2], noeuds, branches, labels, positions, profondeur, pos_droit, pos_courante, null_node)
+        elif null_node:
+            noeuds[1].append(pos_courante)
+            positions[pos_courante] = (pos_courante, profondeur)
+            branches[1].append((pos_courante, pos_parent))
+
+    if arbreAsTuple == ():
+        return
+
+    branches = [[]]
+    profondeur = hauteur(arbre)
+    pos_courante = 2 ** profondeur
+    noeuds = [[pos_courante]]
+    positions = {pos_courante: (pos_courante, profondeur)}
+    labels = {pos_courante: str(arbreAsTuple[0])}
+
+    if null_node:
+        branches.append([])
+        noeuds.append([])
+
+    profondeur -= 1
+    parkour(arbreAsTuple[1], noeuds, branches, labels, positions, profondeur, pos_courante - 2 ** profondeur, pos_courante,
+            null_node)
+    parkour(arbreAsTuple[2], noeuds, branches, labels, positions, profondeur, pos_courante + 2 ** profondeur, pos_courante,
+            null_node)
+
+    mon_arbre = nx.Graph()
+
+    if type(size) == int:
+        size = (size, size)
+    plt.figure(figsize=size)
+
+    nx.draw_networkx_nodes(mon_arbre, positions, nodelist=noeuds[0], node_color="white", node_size=550,
+                           edgecolors="blue")
+    nx.draw_networkx_edges(mon_arbre, positions, edgelist=branches[0], edge_color="black", width=2)
+    nx.draw_networkx_labels(mon_arbre, positions, labels)
+
+    if null_node:
+        nx.draw_networkx_nodes(mon_arbre, positions, nodelist=noeuds[1], node_color="white", node_size=50,
+                               edgecolors="grey")
+        nx.draw_networkx_edges(mon_arbre, positions, edgelist=branches[1], edge_color="grey", width=1)
+
+    ax = plt.gca()
+    ax.margins(0.1)
+    plt.axis("off")
+    plt.show()
+    plt.close()
     ````
 
     Utilisation : 
@@ -303,14 +311,14 @@ Le module `structure.py` est à conserver : il sera utilisé en exercices et dan
     from structures import *
 
     a = ABR()
-    a.clef = 8
+    a.setRacine(8)
     a.insere(5)
     a.insere(3)
     a.insere(12)
     a.insere(10)
     a.insere(15)
 
-    affiche_arbre(a)
+    afficheArbre(a)
     ````
 
     Sortie : 

@@ -1,3 +1,5 @@
+# L'essentiel : Spécification et mise au point
+
 ## 1. Prototyper une fonction
 
 !!! note "Définition"
@@ -9,7 +11,7 @@
     * donnant le type de la valeur retournée
     * précisant des conditions sur la valeur retournée : on parle de **postconditions**
 
-On peut préciser les types attendus pour les entrées et le type de la sortie avec des annotations simples, complétés pas une docstring.
+On peut préciser les types attendus pour les entrées et le type de la sortie avec des annotations simples, complétés par une docstring.
 
 ````py
 def add_trois_nombres(m: int, n: int, p: int) -> int:

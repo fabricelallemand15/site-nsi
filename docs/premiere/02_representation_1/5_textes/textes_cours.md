@@ -5,7 +5,7 @@ title: 5. Représentation d'un texte en machine
 Une chaîne de caractères est une suite ordonnée de caractères. Ces caractères peuvent être :
 
 * des lettres minuscules ou majuscules ;
-* des symboles de ponctuation ou autres  ;
+* des symboles de ponctuation ou autres ;
 * des chiffres.
 
 En machine, les caractères, comme toute autre _information_, est codée de façon numérique par un nombre binaire.
@@ -31,7 +31,7 @@ En 1960, l'organisation internationale de normalisation (International Standard 
 
 La table ASCII fournit la correspondance entre 128 caractères et leur représentation binaire. Les caractères sont numérotés de 0 à 127. Comme $2^7=128$,il suffit de 7 bits par caractère. Cependant, un octet est le plus souvent utilisé, le bit de poids fort, inutilisé, étant toujours égal à 0.
 
-Dans le code ASCII, les codes des lettres minuscules et des lettres majuscules diffèrent d'un bit, le cinquième. Par exemple "G" est codé par $71_{10}=0100\;0111_2$ et "g" est codé par $103_{10}=0101\;0111_2$. Cela revient à ajouter $32=2^5$ pour passer du code de la majuscule au code de la minuscule.
+Dans le code ASCII, les codes des lettres minuscules et des lettres majuscules diffèrent d'un bit, le sixième. Par exemple "G" est codé par $71_{10}=0100\;0111_2$ et "g" est codé par $103_{10}=0110\;0111_2$. Cela revient à ajouter $32=2^5$ pour passer du code de la majuscule au code de la minuscule.
 
 Les chiffres sont codés par le nombre binaire $0011\;XXXX_2$ où $XXXX_2$ est la valeur du chiffre en binaire. Par exemple 5 est codé par $0011\;0101_2$.
 
@@ -41,7 +41,7 @@ Voici la table ASCII complète :
 
 ![](../../../assets/images/table_ASCII.png)
 
-Le code ASCII est suffisant pour écrire un texte en anglais ou pour écrire un programme informatique et il est encore très largement utilisé de nos jours car il a l'avantage d'être léger.
+Le code ASCII est suffisant pour écrire un texte en anglais ou pour écrire un programme informatique et il est encore très largement utilisé de nos jours, car il a l'avantage d'être léger.
 
 Cependant, il est insuffisant pour représenter d'autres langues que l'anglais : pas de caractères accentués, de c-cédille, pas de caractères grecs, hébreux, arabes, chinois, ...
 
@@ -60,7 +60,7 @@ Ces extensions du code ASCII ne suffisent évidemment pas à encoder les caract�
 
 Dans sa version 14.0 publiée en septembre 2021, la table Unicode compte 144 697 caractères couvrant plus de 150 écritures.
 
-Unicode est une table qui regroupe tous les caractères existant au monde mais ne s'occupe pas de la façon dont les caractères sont codés dans la machine. Il existe pour cela plusieurs formats différents, le plus répandu étant l'encodage **UTF-8**.
+Unicode est une table qui regroupe tous les caractères existant au monde, mais ne s'occupe pas de la façon dont les caractères sont codés dans la machine. Il existe pour cela plusieurs formats différents, le plus répandu étant l'encodage **UTF-8**.
 
 **UTF-8** est un code à taille variable dans lequel les caractères sont représentés sur 1, 2, 3 ou 4 octets.
 
@@ -83,7 +83,7 @@ En voici quelques exemples :
 | U+30CD | ネ | Japonais katakana 
 | U+4E7B | 乻 | Chinois |
 
-Les site [unicode-table.com/fr](unicode-table.com/fr) liste tous les caractères de la table Unicode.
+Le site [unicode-table.com/fr](unicode-table.com/fr) liste tous les caractères de la table Unicode.
 
 !!! note "Remarque"
     Depuis sa version 3, Python utilise l'encodage UTF-8 pour les chaînes de caractères.

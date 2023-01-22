@@ -18,3 +18,5 @@ Pour rédiger ce cours et préparer les exercices, TP, projets présentés ici, 
 * Cours d'informatique de [François Brucker (école Centrale de Marseille)](https://francoisbrucker.github.io/cours_informatique/){ target=_blank }
 * Cours de [Philippe Rigaux sur les bases de données.](http://sql.bdpedia.fr/){ target=_blank }
 * Cours de [Gilles Lassus](https://glassus.github.io/terminale_nsi/){ target=_blank }
+* Le site [MDN Web Docs](https://developer.mozilla.org/fr/){ target=_blank } : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.
+* Le site de [M. JANVIER](https://nsi.janviercommelemois.fr/){ target=_blank }.

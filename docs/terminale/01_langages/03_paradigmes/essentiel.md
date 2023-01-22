@@ -1,3 +1,5 @@
+# L'essentiel : paradigmes de programmation
+
 ## Introduction et définition
 
 Un paradigme de programmation est une méthode de programmation.

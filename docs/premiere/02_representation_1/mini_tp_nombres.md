@@ -1,5 +1,7 @@
 # TP : Bases 2, 10 et 16 en Python
 
+[Corrigé](https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/premiere/02_representation_1/TP_Bases_CORR.ipynb){ .md-button .md-button--primary }
+
 Python met à disposition des fonctions permettant de convertir des entiers dans différentes bases.
 
 !!! info "À savoir"
@@ -16,10 +18,10 @@ Python met à disposition des fonctions permettant de convertir des entiers dans
 
 ````pycon
 >>> bin(123)
->>> int("0b1111")
->>> int("0b10101", 2)
+>>> int(b"1111")
+>>> int(b"10101", 2)
 >>> bin(0)
->>> int("0b101211", 2)
+>>> int(b"101211", 2)
 >>> hex(2022)
 >>> int("0xABC", 16)
 ````

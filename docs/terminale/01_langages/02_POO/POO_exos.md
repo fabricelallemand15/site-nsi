@@ -128,6 +128,8 @@ Simon a écrit la classe Python ``Carte`` suivante, ayant deux attributs ``valeu
     * 1 si la carte cartel est strictement plus forte que carte2
     * -1 si la carte carte2 est strictement plus forte que cartel
 
+[Voir le corrigé](https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/assets/notebooks/exo3_POO_CORR.ipynb){target=_blank .md-button .md-button--primary}
+
 ------------------------------------------
 
 ## :octicons-pencil-16: Exercice 4 (Bac 2022)
@@ -191,6 +193,8 @@ class Stock:
 5. L’industriel possède n lieux de production distincts et donc n stocks distincts.
 
     On suppose que ces stocks sont dans une liste dont chaque élément est un objet de type ``Stock``. Écrire une fonction Python ``nb_brioches(liste_stocks)`` possédant pour unique paramètre la liste des stocks et qui renvoie le nombre total de brioches produites.
+
+[Voir le corrigé](https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/assets/notebooks/exo4_POO_CORR.ipynb){target=_blank .md-button .md-button--primary}
 
 -----------------------------------------
 

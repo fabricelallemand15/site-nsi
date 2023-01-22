@@ -8,11 +8,11 @@ Mais on peut imaginer beaucoup d'autres possibilités, par exemple, les chiffres
 
 ## 2. La base 10
 La représentation usuelle des nombres est une représentation *décimale*
-et *positionnelle*. Cela signifie:
+et *positionnelle*. Cela signifie :
 
 1.  que les nombres sont représentés par une séquence de *chiffres* de
     $0$ à $9$ inclus. Il y a bien *dix* chiffres différents utilisés,
-    d'où le terme *décimal*;
+    d'où le terme *décimal* ;
 
 2.  que la *position* de chaque chiffre dans la séquence permet
     d'associer ce chiffre à une *puissance de 10*.
@@ -21,7 +21,7 @@ Dans cette représentation usuelle, 10 est appelé la *base*. On parle
 aussi de représentation en base 10.
 
 !!! tip "Exemple"
-    Par exemple, la représentation: 
+    Par exemple, la représentation : 
 
     $$1234$$
 
@@ -56,7 +56,7 @@ Le nombre :
 
 $${d_n\cdots d_0}_b$$
 
-représente la valeur:
+représente la valeur :
 
 $$N = d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0$$
 
@@ -102,7 +102,7 @@ $${d_n\cdots d_0}_b = (d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^
 C'est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base $b$, on procède par **divisions euclidiennes successives par $b$**. Les restes obtenus sont les chiffres de l'écriture du nombre en base $b$.
 
 !!! tip "Exemple"
-    On reste avec $b=5$. Soit $N=64_{10}$ : on souhaite écrite $N$ en base 5.
+    On reste avec $b=5$. Soit $N=64_{10}$ : on souhaite écrire $N$ en base 5.
 
     On effectue pour cela la suite de divisions suivante : 
 
@@ -139,7 +139,7 @@ Voici comment compter jusqu'à 10 en base 2 :
 |10|1010|On continue comme tout à l'heure.|
 |...|...|...|
 
-Les nombres en base 2 on très vite beaucoup de chiffres. Pour faciliter la lecture, on a l'habitude de regrouper ces chiffres par paquets de 4 à partir de la droite.
+Les nombres en base 2 ont très vite beaucoup de chiffres. Pour faciliter la lecture, on a l'habitude de regrouper ces chiffres par paquets de 4 à partir de la droite.
 
 ### Conversion de la base 2 à la base 10
 
@@ -185,7 +185,7 @@ En base 16, on utilise 16 chiffres, alors que notre numération usuelle, en base
 |1110|14|E|
 |1111|15|F|
 
-On observe que **tous** les chiffres de la base 16 sont **tous** les nombres que l'on peut coder en binaire sur 4 bits. Dans l'écriture en base 2 d'un nombres, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : $1101\; 0011_2$. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc $1101\; 0011_2 = D3_{16}$.
+On observe que **tous** les chiffres de la base 16 sont **tous** les nombres que l'on peut coder en binaire sur 4 bits. Dans l'écriture en base 2 d'un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : $1101\; 0011_2$. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc $1101\; 0011_2 = D3_{16}$.
 
 Les méthodes de conversion restent les mêmes.
 
@@ -195,7 +195,7 @@ Les méthodes de conversion restent les mêmes.
 
 Dans la représentation positionnelle usuelle, le chiffre le plus à
 gauche est associé à une puissance plus élevée de la base. On parle donc
-de chiffre de "poids fort"; le chiffre étant associé à la puissance la
+de chiffre de "poids fort" ; le chiffre étant associé à la puissance la
 plus faible est appel chiffre de "poids faible". En particulier, en
 binaire, on parle de **bit de poids fort** et **bit de poids faible**.
 
@@ -225,7 +225,7 @@ $$\underbrace{1\cdots 1_b}_{n\text{ chiffres}} = 2^n-1.$$
 
 !!! note "À retenir"
     En base $2$, il y a $2^n$ nombres (entiers positifs) représentables sur
-    $n$ bits: les nombres de $0$ à $2^n-1$.
+    $n$ bits : les nombres de $0$ à $2^n-1$.
 
 !!! question "Exercice"
     Démontrer que $\underbrace{1\cdots 1_2}_{n\text{ chiffres}} = 2^n-1.$

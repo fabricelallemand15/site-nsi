@@ -36,26 +36,21 @@ class Nombres():
     def diminuer(self):
         self.valeur -= 1
 
-    def __ge__(self):
-        if self.valeur>=0:
-            return True
-        else:
-            return False
-
     def __str__(self):
         return str(self.valeur)
 
 n = Nombres(9)
-while n.__ge__() :
-    print(n.__str__())
+while n.valeur >= 0 :
+    print(n)
     n.diminuer()
+
 ````
 
 -------------------------------------
                     
 ## :octicons-pencil-16: Exercice 2
 
-Voici deux versions d'une fonction ``teste_ordre_liste`` dont l'objectif est sde avoir si une liste est ordonnée par ordre croissant. Indiquer quel paradigme est utilisé dans chacune des deux versions et expliquer votre réponse.
+Voici deux versions d'une fonction ``teste_ordre_liste`` dont l'objectif est de savoir si une liste est ordonnée par ordre croissant. Indiquer quel paradigme est utilisé dans chacune des deux versions et expliquer votre réponse.
 
 **Version 1**
 

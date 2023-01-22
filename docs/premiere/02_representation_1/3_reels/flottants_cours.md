@@ -25,7 +25,7 @@ Comment écrire un nombre décimal en base 2 ?
     * on multiplie $0,125$ par $2$ : $0,125\times 2 = 0,25$ : partie entière $0$.
     * on multiplie $0,25$ par $2$ : $0,25\times 2 = 0,5$ : partie entière $0$.
     * on multiplie $0,5$ par $2$ : $0,5\times 2 = 1$ : partie entière $1$.
-    * on s'arrête car il n'y a plus de partir décimale.
+    * on s'arrête car il n'y a plus de partie décimale.
 
     La suite des parties entières obtenues forme la partie décimale de l'écriture binaire : 
 
@@ -54,7 +54,7 @@ $$0,35_{10} =  0,0101100110110110110110...$$
     False
     ````
 
-    Morale : :warning::warning::warning: **on évitera toujours de comparer des flottants en Python.** :warning::warning::warning:
+    Morale : :warning::warning::warning: **On évitera toujours de comparer des flottants en Python.** :warning::warning::warning:
     
 ## 2. Conversion de la base 2 à la base 10
 
@@ -74,14 +74,14 @@ Pour la représentation en machine, le principe s'inspire de l'idée de la **not
 
 Par exemple : $2022 = 2,022\times 10^3$.
 
-L'exposant de 10 représente le nombre de décalages de la virgules à effectuer (vers la
+L'exposant de 10 représente le nombre de décalages de la virgule à effectuer (vers la
 droite pour un exposant positif, vers la gauche pour un exposant négatif) de la virgule qu'il faut affecter au nombre $2,022$ pour retrouver le nombre d'origine.
 
 Le principe de la représentation binaire des décimaux est le même, mais tout est en base 2, les puissances de 10 sont donc remplacées par des puissances de 2.
 
 C'est la norme internationale IEEE-754 définit les formats de représentation des nombres à virgule flottante.
 
-Considérons un nombre binaire $x$. Nous l'écrivons sous la forme $\pm 1,XXXXXX\times 2^e$ : c'est la "notations scientifique binaire". Dans cet écriture, nous avons le signe, la suite des chiffres après la virgule qui s'appelle **la mantisse** $m=XXXXXX$ et l'exposant $e$.
+Considérons un nombre binaire $x$. Nous l'écrivons sous la forme $\pm 1,XXXXXX\times 2^e$ : c'est la "notation scientifique binaire". Dans cette écriture, nous avons le signe, la suite des chiffres après la virgule qui s'appelle **la mantisse** $m=XXXXXX$ et l'exposant $e$.
 
 !!! info "Représentation des flottants"
     Avant de pouvoir représenter un flottant, il faut choisir un format. Considérons une représentation sur 32 bits (usuellement on utilise 32 bits ou 64 bits).
@@ -109,7 +109,7 @@ Le principe de l'excès à 127 permet de se ramener à un nombre positif pour l'
     * Tout d'abord nous l'écrivons sous la forme "scientifique" : $1010,001=1,010001\times 2^3$.
     * Le signe est positif : le bit de poids fort sera donc 0.
     * L'exposant vaut 3, codé par $3+127=130$ sur 8 bits (1 octet), ce qui donne : $130_{10}=1000 0010_2$ codage auquel on ajoute des zéros **à gauche** pour obtenir 8 bits si le nombre de chiffres est inférieur à 8.
-    * La mantisse est égale $010001$ : on complète par des zéros **à droite** pour arriver à 23 bits. On met cette fois-ci des zéros à droites : ils ne changent pas la valeur de la mantisse car il ne faut pas oublier qu'il s'agit de chiffres **après** la virgule ! Cela donne : $0100 0100 0000 0000 0000 000$.
+    * La mantisse est égale à $010001$ : on complète par des zéros **à droite** pour arriver à 23 bits. On met cette fois-ci des zéros à droites : ils ne changent pas la valeur de la mantisse car il ne faut pas oublier qu'il s'agit de chiffres **après** la virgule ! Cela donne : $0100 0100 0000 0000 0000 000$.
     * On met tout ensemble : le nombre $10,125$ est codé par :
 
     $$0100\; 0001\; 0010\; 0010\; 0000\; 0000\; 0000\; 0000$$

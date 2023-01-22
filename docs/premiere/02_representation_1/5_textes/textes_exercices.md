@@ -16,7 +16,7 @@ Considérons le procédé **rot-13** qui consiste à remplacer une lettre codée
 
 Comme l'alphabet latin compte 26 lettres, le déchiffrement se fait exactement par la même opération.
 
-Pour trouver l'image par rot13 du caractère 'R' est 'E' : 
+Pour trouver que l'image par rot-13 du caractère 'R' est 'E' : 
 
 * on calcule d'abord le rang alphabétique du caractère :
     ````pycon

@@ -4,3 +4,4 @@ nav:
     - Arbres (cours): arbres.md
     - Exercices: exos_arbres.md
     - Implémentation: implementation.md
+    - T.P. Manipulations d'arbres: TP_arbres.md

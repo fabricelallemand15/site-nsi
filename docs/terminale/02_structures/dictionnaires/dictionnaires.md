@@ -9,12 +9,12 @@ On retrouve une structure qui ressemble, à première vue, beaucoup à un tablea
 
 Un dictionnaire associe une clé à une valeur. On peut voir les tableaux comme un dictionnaire où les clés sont des entiers allant de 0 à la longueur de la liste moins 1.
 
-Mais cela peut être bien plus général que ça :
+Mais cela peut être bien plus général :
 
-* les clés peuvent être de mots et les valeur un nombre. Cela permet par exemple de compter le nombre de fois où un chaque mot d'un texte apparaît.
+* les clés peuvent être des mots et les valeurs un nombre. Cela permet par exemple de compter le nombre de fois où un chaque mot d'un texte apparaît.
 * associer un nom (valeur) à un numéro de téléphone (clé) sans avoir besoin d'une liste allant de 0 à numéro max de téléphone.
 
-Les clés ne doivent pas changer une fois créées, sinon la serrure fabriquée dans le dictionnaire ne fonctionne plus. On ne doit donc utiliser que des objets non modifiable pour créer des clés d'un dictionnaire Python. Comme par exemple :
+Les clés ne doivent pas changer une fois créées, sinon la serrure fabriquée dans le dictionnaire ne fonctionne plus. On ne doit donc utiliser que des objets non modifiables pour créer des clés d'un dictionnaire Python. Comme :
 
 * des entiers
 * des réels

@@ -4,6 +4,7 @@ nav:
     - 2. Du transistor au processeur: neumann_cours_2.md
     - 3. Architecture de von Neumann: neumann_cours_3.md
     - 4. Langage machine - Assembleur: neumann_cours_4.md
+    - T.P. (circuits): exos_circuits.md
     - Exercices (von Neumann): neumann_exos.md
     - TP - Simulateur AQA: neumann_TP.md
     - L'essentiel: neumann_essentiel.md

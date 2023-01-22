@@ -57,12 +57,12 @@ Reprenons l'exemple de l'entier $3_{10} = 0011_2$ codé sur 4 bits. $-3_{10}$ se
 
 ### Combien de nombres ?
 
-Nous savons que, sur $n$ bits, nous pouvons représenter $2^n$ entiers naturels : tous les entiers de $0$ à $2^n-$. 
+Nous savons que, sur $n$ bits, nous pouvons représenter $2^n$ entiers naturels : tous les entiers de $0$ à $2^n-1$. 
 
 Avec le complément à 2 : 
 
-* la première moitié de ces entiers vont représenter les $2^{n-1}$ premiers entiers positifs : de $0$ à $2^{n-1}-1$, 
-* la seconde moitié vont représenter les $2^{n-1}$ premiers entiers négatifs : de $-1$ à $-2^{n-1}$.
+* la première moitié de ces entiers va représenter les $2^{n-1}$ premiers entiers positifs : de $0$ à $2^{n-1}-1$, 
+* la seconde moitié va représenter les $2^{n-1}$ premiers entiers négatifs : de $-1$ à $-2^{n-1}$.
 
 Avec le complément à deux, $-1$ sera représenté par $2^n-1$, soit $11111\ldots 1111$.
 
