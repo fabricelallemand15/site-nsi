@@ -1,5 +1,6 @@
 title: S7-Réseaux
 nav:
     - index.md
+    - revisions_IP.md
     - cours_routage.md
     - exos_routage.md
