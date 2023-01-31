@@ -2,797 +2,1702 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nsi.flallemand.fr/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/mentions/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/politique_conf/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/tags-index/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/corrections/exo_type_bac_recursivite_1_corr/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/histoire/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases_exos_1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases_exos_2/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases_exos_3/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases_exos_4/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/python_bases_quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/1_bases/supplements/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/2_specif/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/2_specif/specif_quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/2_specif/specif_tests/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/2_specif/specif_tests_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/2_specif/test_IDE/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/3_langages/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/3_langages/langages/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/01_langages/4_TP_rue/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/mini_tp_nombres/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/1_naturels/naturels_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/1_naturels/naturels_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/1_naturels/naturels_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/2_relatifs/relatifs_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/2_relatifs/relatifs_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/2_relatifs/relatifs_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/3_reels/flottants_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/3_reels/flottants_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/3_reels/flottants_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/4_booleens/booleens_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/4_booleens/booleens_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/4_booleens/booleens_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/5_textes/textes_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/5_textes/textes_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/02_representation_1/5_textes/textes_exercices/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/exos_circuits/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_TP/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_cours_1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_cours_2/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_cours_3/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_cours_4/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/1_neumann/neumann_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/2_SE/SE_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/2_SE/SE_essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/03_archi_SE/2_SE/SE_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/dicos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/enonce/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/exos_dicos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/exos_tabs/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/exos_tuples/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/p_uplets/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/04_representation_2/tableaux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/05_algos_1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/Exos_HTTP/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/TP_forms/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/acti1_HTML/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/acti2_CSS/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/acti3_Javascript/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/acti4_forms/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/cours_CSS/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/cours_HTML/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/cours_HTTP/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/cours_JS/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/cours_forms/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/exos_forms/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/06_web/ref_HTML/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/07_tables/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/07_tables/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/07_tables/quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/07_tables/tables_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/07_tables/tables_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/08_algos_2/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/09_reseaux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/premiere/10_IHM/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/ressources/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/ressources/Sources/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/ressources/exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/ressources/python_IDE/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/ressources/spyder/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/scripts/essai_REM/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/seconde/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/</loc>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/annales/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/epreuve_pratique/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/01_recursivite/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/01_recursivite/recurs_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/01_recursivite/recursivite/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/01_recursivite/tp_hanoi/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/02_POO/POO/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/02_POO/POO_complements/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/02_POO/POO_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/02_POO/TP_POO/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/02_POO/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/03_paradigmes/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/03_paradigmes/paradigmes/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/03_paradigmes/paradigmes_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/01_langages/03_paradigmes/paradigmes_quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/bilan/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/interfaces/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/projet1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/dictionnaires/dicos_TP/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/dictionnaires/dicos_exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/dictionnaires/dictionnaires/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/listes_piles_files/exercices/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/listes_piles_files/files/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/listes_piles_files/listes/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/02_structures/listes_piles_files/piles/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/TP1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/TP2/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/TP3/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/SGBD/SGBD/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/SQL/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/SQL/sql/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/modele_relationnel/essentiel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/modele_relationnel/intro/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/modele_relationnel/modele_relationnel/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/03_BDD/modele_relationnel/quiz/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/04_arbres/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/04_arbres/TP_arbres/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/04_arbres/arbres/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/04_arbres/exos_arbres/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/04_arbres/implementation/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/processus/TP_Linux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/processus/TP_Linux_ancienne_version/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/processus/demo_processus_python/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/processus/exos_processus/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/05_archi_SE/processus/processus_cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/rappels/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/algos_arbres/cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/algos_arbres/exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/diviser_pour_regner/cours/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/06_algo_1/diviser_pour_regner/exos/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/07_reseaux/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/07_reseaux/cours_routage/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/07_reseaux/exos_routage/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/07_reseaux/revisions_IP/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/terminale/08_complements/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-01/01_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-01/01_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-01/01_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-01/01_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-02/02_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-02/02_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-02/02_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-02/02_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-03/03_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-03/03_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-03/03_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-03/03_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-04/04_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-04/04_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-04/04_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-04/04_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-05/05_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-05/05_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-05/05_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-05/05_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-06/06_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-06/06_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-06/06_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-06/06_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-07/07_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-07/07_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-07/07_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-07/07_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-08/08_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-08/08_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-08/08_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-08/08_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-09/09_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-09/09_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-09/09_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-09/09_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-10/10_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-10/10_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-10/10_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-10/10_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-11/11_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-11/11_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-11/11_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-11/11_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-12/12_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-12/12_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-12/12_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-12/12_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-13/13_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-13/13_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-13/13_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-13/13_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-14/14_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-14/14_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-14/14_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-14/14_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-15/15_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-15/15_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-15/15_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-15/15_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-16/16_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-16/16_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-16/16_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-16/16_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-17/17_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-17/17_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-17/17_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-17/17_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-18/18_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-18/18_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-18/18_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-18/18_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-19/19_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-19/19_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-19/19_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-19/19_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-20/20_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-20/20_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-20/20_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-20/20_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-21/21_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-21/21_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-21/21_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-21/21_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-22/22_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-22/22_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-22/22_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-22/22_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-23/23_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-23/23_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-23/23_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-23/23_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-24/24_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-24/24_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-24/24_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-24/24_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-25/25_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-25/25_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-25/25_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-25/25_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-26/26_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-26/26_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-26/26_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-26/26_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-27/27_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-27/27_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-27/27_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-27/27_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-28/28_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-28/28_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-28/28_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-28/28_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-29/29_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-29/29_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-29/29_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-29/29_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-30/30_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-30/30_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-30/30_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-30/30_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-31/31_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-31/31_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-31/31_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-31/31_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-32/32_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-32/32_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-32/32_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-32/32_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-33/33_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-33/33_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-33/33_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-33/33_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-34/34_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-34/34_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-34/34_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-34/34_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-35/35_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-35/35_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-35/35_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-35/35_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-36/36_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-36/36_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-36/36_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-36/36_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-37/37_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-37/37_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-37/37_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-37/37_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-38/38_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-38/38_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-38/38_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-38/38_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-39/39_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-39/39_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-39/39_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-39/39_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-40/40_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-40/40_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-40/40_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-40/40_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-41/41_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-41/41_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-41/41_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-41/41_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-42/42_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-42/42_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-42/42_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-42/42_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-43/43_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-43/43_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-43/43_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-43/43_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-44/44_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-44/44_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-44/44_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-44/44_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-45/45_1/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-45/45_1/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-45/45_2/correction/</loc>
+         <lastmod>2023-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.flallemand.fr/terminale/EP2023/BNS_2023/23-NSI-45/45_2/enonce/</loc>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/xtra/end_REM/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/xtra/start_REM/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.flallemand.fr/tags-index/</loc>
-         <lastmod>2023-01-28</lastmod>
+         <lastmod>2023-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
