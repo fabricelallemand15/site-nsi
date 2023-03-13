@@ -1,0 +1,103 @@
+%% Creator: Inkscape 1.2 (dc2aedaf03, 2022-05-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'arborescence_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{840.375bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.41811691)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{arborescence_svg-tex.pdf}}%
+    \put(0.51717983,0.3859884){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}/\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{arborescence_svg-tex.pdf}}%
+    \put(0.08879964,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}bin\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{arborescence_svg-tex.pdf}}%
+    \put(0.23159304,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}boot\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{arborescence_svg-tex.pdf}}%
+    \put(0.37438643,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}dev\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{arborescence_svg-tex.pdf}}%
+    \put(0.51717983,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}etc\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{arborescence_svg-tex.pdf}}%
+    \put(0.65997323,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}home\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{arborescence_svg-tex.pdf}}%
+    \put(0.80276662,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}lib\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{arborescence_svg-tex.pdf}}%
+    \put(0.94556002,0.27889335){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}media\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{arborescence_svg-tex.pdf}}%
+    \put(0.02632753,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}bash\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{arborescence_svg-tex.pdf}}%
+    \put(0.13342258,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cat\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{arborescence_svg-tex.pdf}}%
+    \put(0.23159304,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}grub\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{arborescence_svg-tex.pdf}}%
+    \put(0.23159304,0.13163766){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}grub.c...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{arborescence_svg-tex.pdf}}%
+    \put(0.37438643,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}cpu\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{arborescence_svg-tex.pdf}}%
+    \put(0.58857653,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}fabrice\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{arborescence_svg-tex.pdf}}%
+    \put(0.73136992,0.19857207){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}marie\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{arborescence_svg-tex.pdf}}%
+    \put(0.58857653,0.10932619){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Images\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{arborescence_svg-tex.pdf}}%
+    \put(0.73136992,0.10932619){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Documents\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{arborescence_svg-tex.pdf}}%
+    \put(0.52164212,0.04328425){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}img_48...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{arborescence_svg-tex.pdf}}%
+    \put(0.65997323,0.04328425){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}img_75...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{arborescence_svg-tex.pdf}}%
+    \put(0.73136992,0.00847836){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}compte...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{arborescence_svg-tex.pdf}}%
+    \put(0.94556002,0.18964748){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}usb0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{arborescence_svg-tex.pdf}}%
+    \put(0.87416332,0.10932619){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Vidéos\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{arborescence_svg-tex.pdf}}%
+    \put(0.87416332,0.04328425){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}mon_fi...\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

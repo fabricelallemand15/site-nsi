@@ -1,0 +1,75 @@
+%% Creator: Inkscape 1.2 (dc2aedaf03, 2022-05-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'arbre_bin2_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{285.375bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.86859396)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.52562418,0.80551905){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.21024967,0.59526938){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.10512484,0.38501971){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}U\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.84099869,0.59526938){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Q\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.31537451,0.38501971){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}R\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.42049934,0.17477004){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}G\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.73587385,0.38501971){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}H\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.26281209,0.02496715){\color[rgb]{1,0.50196078,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Sous-arbre gauche\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{arbre_bin2_svg-tex.pdf}}%
+    \put(0.78843627,0.02496715){\color[rgb]{1,0.50196078,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Sous-arbre droit\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

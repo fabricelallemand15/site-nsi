@@ -31,7 +31,7 @@ Remarquons que le serveur reçoit simultanément des requêtes de plusieurs clie
     Dans le cadre de ce cours le client est le navigateur internet.
 <!--  -->
 
-Par défaut, le protocole HTTP n'est pas sécurisé, les données (texte de la requête et réponse) circulent dont de façon ouverte dans le réseau. Il peut cependant être sécurisé en utilisant un protocole de cryptage SSL ou TLS et il s'appelle dans ce cas **HTTPS**. 
+Par défaut, le protocole HTTP n'est pas sécurisé, les données (texte de la requête et réponse) circulent donc de façon ouverte dans le réseau. Il peut cependant être sécurisé en utilisant un protocole de cryptage SSL ou TLS et il s'appelle dans ce cas **HTTPS**. 
 
 !!! info "Remarque"
     En réalité, le client est également connecté à plusieurs serveurs. Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus. Ces différents éléments proviennent souvent de différents serveurs.
@@ -66,7 +66,7 @@ On trouve les éléments suivants :
 * la version du protocole `HTTP/1.1` ou `HTTP/2`.
 * les en-têtes optionnels qui transmettent des informations supplémentaires pour les serveurs ;
 
-Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](){target="_blank"}. : 
+Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/nsi/premiere/06_web/mapageweb.html){target="_blank"}. : 
 
 ```html
 <html>
@@ -103,7 +103,7 @@ On trouve les éléments suivants :
 * les en-têtes HTTP, comme pour les requêtes ;
 * éventuellement un corps contenant la ressource récupérée.
 
-Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](){target="_blank"}, voici la réponse du serveur :
+Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/nsi/premiere/06_web/mapageweb.html){target="_blank"}, voici la réponse du serveur :
 
 ```http
 HTTP/1.1 200 OK

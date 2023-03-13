@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Risques naturels recensés</title>
+    <!-- Feuille de style pour les cartes -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/> 
+    <!-- Script nécessaire pour les cartes -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="georisques.css">
+    <script src="georisques.js"></script>
+</head>
+
+<body>
+    <h1>
+        Risques naturels recensés
+    </h1>
+    <section id="carte">
+        <h2>Carte de France</h2>
+        <p>Cliquer sur un point du territoire français pour définir un lieu, cliquer ensuite sur le bouton "Envoyer" pour interroger le site https://www.georisques.gouv.fr</p>
+        <div id="map">
+            <!-- la carte s'affichera ici - cet affichage est géré par le script javascript -->
+        </div>
+        <form>
+            <label for="latitude">Latitude : </label> <input type="text" id="latitude" name="lat" /><br>
+            <label for="longitude">Longitude :</label> <input type="text" id="longitude" name="lng" /><br>
+            <button onclick="requ()">Envoyer</button>
+        </form>
+    </section>
+    <section id="resultats">
+        
+
+    </section>
+    
+
+    <script>
+        var lat = "46.0"
+        var lon = "3.0"
+        const div = document.querySelector('#resultats');
+        var url = "http://www.georisques.gouv.fr/api/v1/gaspar/risques?";
+        var map = L.map('map').setView([46.3, 2.5], 5);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+        
+        var popup = L.popup();
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("Coordonnées sélectionnées : <br>  Latitude :" + e.latlng['lat'].toString() + "<br>  Longitude :" + e.latlng['lng'].toString())
+                .openOn(map);
+            document.getElementById('latitude').value = e.latlng['lat'].toString();
+            document.getElementById('longitude').value = e.latlng['lng'].toString();
+            lat = e.latlng['lat'].toString();
+            lon = e.latlng['lng'].toString();
+            url = url+lat+'%2C'+lon+"&page=1&page_size=10&rayon=1000";
+            url="https://www.georisques.gouv.fr/api/v1/gaspar/risques?latlon=2.29253%2C48.92572&page=1&page_size=10&rayon=1000"
+        };
+        map.on('click', onMapClick);
+        async function requ(){
+            console.log(url);
+            try {
+                const response = await fetch(url, {
+                methode: 'GET',
+                hearders: {
+                    accept: 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Erreur ! status : ${response.status}');
+            }
+
+            const result = await response.json();
+            return result;
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        </script>
+    
+</body>
+
+</html>
