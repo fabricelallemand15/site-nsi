@@ -87,7 +87,7 @@ Certains attributs sont spécifiques à des balises particulières, d'autres son
     * Plusieurs éléments HTML peuvent appartenir à une même classe : cela permet par exemple de leur appliquer le même style CSS.
     * Un identifiant, par contre, est unique : deux éléments HTML ne doivent pas avoir le même identifiant.
 
-## 2. Structure générale du fichier HTML
+## 3. Structure générale du fichier HTML
 
 La structure globale d'une page HTML est toujours la même (l'indentation est utilisée pour la lisibilité du code, mais elle n'est pas nécessaire):
 

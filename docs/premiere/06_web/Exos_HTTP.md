@@ -12,7 +12,7 @@ Avec un navigateur Web, demander la page  d'adresse [https://nsi.flallemand.fr/d
 1. La communication est-elle sécurisée ?
 1.  Quelles informations **sur le client** sont transmises au serveur dans l'entête de la requête ?
 1.  Quelles informations **sur le serveur** sont transmises au client dans l'entête de la réponse ?
-1.  Effectuer une nouvelle requête avec l'URL [https://nsi.flallemand.fr/Divers/mapageweb.html](). Quel est le code d'état de la réponse ? Explication ?
+1.  Effectuer une nouvelle requête avec l'URL [https://nsi.flallemand.fr/Divers/mapageweb.html](https://nsi.flallemand.fr/Divers/mapageweb.html). Quel est le code d'état de la réponse ? Explication ?
 1.  Effectuer une nouvelle requête avec l'URL [https://nsi.flallemand.fr/divers/interdit/](https://nsi.flallemand.fr/divers/interdit/). Quel est le code d'état de la réponse ? Explication ?
 
 ## :fontawesome-solid-computer: Exercice 2 : HTTP et python
