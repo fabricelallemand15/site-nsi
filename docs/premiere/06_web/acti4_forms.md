@@ -212,7 +212,7 @@ Pour éviter cet affichage dans la barre d'adresse, on utilise plutôt la métho
 Pour cela, modifier l'attribut **method** dans le fichier `index.html` :
 
 ```html
-<form action="http://nsi.flallemand.fr/divers/acti4_forms_bis.php" method="gpost">
+<form action="http://nsi.flallemand.fr/divers/acti4_forms_bis.php" method="post">
 ```
 
 On modifie aussi l'attribut **action** car le code PHP pour extraire les données transmises par la méthode POST n'est pas exactement le même.

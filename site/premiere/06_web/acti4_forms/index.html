@@ -4443,7 +4443,7 @@
 <p>Observer l'URL affichée dans la barre d'adresse du navigateur. Que constatez-vous ?</p>
 <p>Pour éviter cet affichage dans la barre d'adresse, on utilise plutôt la méthode HTTP POST pour l'envoi de données de formulaires.</p>
 <p>Pour cela, modifier l'attribut <strong>method</strong> dans le fichier <code>index.html</code> :</p>
-<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;http://nsi.flallemand.fr/divers/acti4_forms_bis.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;gpost&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;http://nsi.flallemand.fr/divers/acti4_forms_bis.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>On modifie aussi l'attribut <strong>action</strong> car le code PHP pour extraire les données transmises par la méthode POST n'est pas exactement le même.</p>
 <p>Tester à nouveau cette nouvelle version du formulaire et observer l'URL affiché dans la barre d'adresse.</p>
